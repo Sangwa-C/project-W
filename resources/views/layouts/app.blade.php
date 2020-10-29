@@ -103,11 +103,17 @@
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">About</a>
+                        <a class="nav-link text-light" href="#">Succefful Stories</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Services</a>
+                        <a class="nav-link text-light" href="/login">log-In</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="/register">Sign-Up</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="#">Contact</a>
@@ -132,7 +138,7 @@
 
     </script>
 
-  
+
 
 
 

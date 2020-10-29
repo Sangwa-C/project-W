@@ -80,7 +80,6 @@
         font-size: 1.2em;
     }
 
-
 </style>
 
 
@@ -99,15 +98,21 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link text-light" href="#">Home
+                        <a class="nav-link text-light" href="/">Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">About</a>
+                        <a class="nav-link text-light" href="#">Succefful Stories</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Services</a>
+                        <a class="nav-link text-light" href="/login">log-In</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="/register">Sign-Up</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="#">Contact</a>
@@ -280,7 +285,7 @@
 
 
 
-    <main >
+    <main>
         @yield('content')
     </main>
 
@@ -290,5 +295,3 @@
 </body>
 
 </html>
-
-
