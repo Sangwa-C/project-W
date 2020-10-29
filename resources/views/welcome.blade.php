@@ -1,145 +1,108 @@
-@extends('layouts.app')
+@extends('layouts.all')
 
 @section('content')
-<style>
+    <style>
 
-    .profile-card-5 {
-        margin-top: 20px;
-    }
-
-    .profile-card-5 .btn {
-        border-radius: 2px;
-        text-transform: uppercase;
-        font-size: 12px;
-        padding: 7px 20px;
-    }
-
-    .profile-card-5 .card-img-block {
-        width: 91%;
-        margin: 0 auto;
-        position: relative;
-        top: -20px;
-
-    }
-
-    .profile-card-5 .card-img-block img {
-        border-radius: 50%;
-        height: 200px;
-        width: 60%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.63);
-    }
-
-    .profile-card-5 h5 {
-        color: #4E5E30;
-        font-weight: 600;
-    }
-
-    .profile-card-5 p {
-        font-size: 14px;
-        font-weight: 300;
-    }
-
-    .profile-card-5 .btn-primary {
-        background-color: #4E5E30;
-        border-color: #4E5E30;
-    }
-
-    .contact-form {
-        background: #fff;
-        margin-top: 5%;
-        /* margin-bottom: 5%; */
-        width: 70%;
-    }
-
-    .contact-form .form-control {
-        border-radius: 1rem;
-    }
-
-    .contact-image {
-        text-align: center;
-    }
-
-    .contact-image img {
-        border-radius: 6rem;
-        width: 11%;
-        margin-top: -3%;
-        transform: rotate(29deg);
-    }
-
-    .contact-form form {
-        padding: 14%;
-    }
-
-    .contact-form form .row {
-        margin-bottom: -7%;
-    }
-
-    .contact-form h3 {
-        margin-bottom: 8%;
-        margin-top: -10%;
-        text-align: center;
-        color: #0062cc;
-    }
-
-    .contact-form .btnContact {
-        width: 50%;
-        border: none;
-        border-radius: 1rem;
-        padding: 1.5%;
-        background: #dc3545;
-        font-weight: 600;
-        color: #fff;
-        cursor: pointer;
-    }
-
-    .btnContactSubmit {
-        width: 50%;
-        border-radius: 1rem;
-        padding: 1.5%;
-        color: #fff;
-        background-color: #0062cc;
-        border: none;
-        cursor: pointer;
-    }
-
-    /* @media (max-width: 768px) {
-        .carousel-inner .carousel-item>div {
-            display: none;
+        .profile-card-5 {
+            margin-top: 20px;
         }
 
-        .carousel-inner .carousel-item>div:first-child {
-            display: block;
-        }
-    }
-
-    .carousel-inner .carousel-item.active,
-    .carousel-inner .carousel-item-next,
-    .carousel-inner .carousel-item-prev {
-        display: flex;
-    } */
-
-    /* display 3 */
-    /* @media (min-width: 768px) {
-
-        .carousel-inner .carousel-item-right.active,
-        .carousel-inner .carousel-item-next {
-            transform: translateX(33.333%);
+        .profile-card-5 .btn {
+            border-radius: 2px;
+            text-transform: uppercase;
+            font-size: 12px;
+            padding: 7px 20px;
         }
 
-        .carousel-inner .carousel-item-left.active,
-        .carousel-inner .carousel-item-prev {
-            transform: translateX(-33.333%);
+        .profile-card-5 .card-img-block {
+            width: 91%;
+            margin: 0 auto;
+            position: relative;
+            top: -20px;
+
         }
-    }
 
-    .carousel-inner .carousel-item-right,
-    .carousel-inner .carousel-item-left {
-        transform: translateX(0);
-    } */
+        .profile-card-5 .card-img-block img {
+            border-radius: 50%;
+            height: 200px;
+            width: 60%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.63);
+        }
 
-</style>
+        .profile-card-5 h5 {
+            color: #4E5E30;
+            font-weight: 600;
+        }
 
+        .profile-card-5 p {
+            font-size: 14px;
+            font-weight: 300;
+        }
 
+        .profile-card-5 .btn-primary {
+            background-color: #4E5E30;
+            border-color: #4E5E30;
+        }
+
+        .contact-form {
+            background: #fff;
+            margin-top: 5%;
+            /* margin-bottom: 5%; */
+            width: 70%;
+        }
+
+        .contact-form .form-control {
+            border-radius: 1rem;
+        }
+
+        .contact-image {
+            text-align: center;
+        }
+
+        .contact-image img {
+            border-radius: 6rem;
+            width: 11%;
+            margin-top: -3%;
+            transform: rotate(29deg);
+        }
+
+        .contact-form form {
+            padding: 14%;
+        }
+
+        .contact-form form .row {
+            margin-bottom: -7%;
+        }
+
+        .contact-form h3 {
+            margin-bottom: 8%;
+            margin-top: -10%;
+            text-align: center;
+            color: #0062cc;
+        }
+
+        .contact-form .btnContact {
+            width: 50%;
+            border: none;
+            border-radius: 1rem;
+            padding: 1.5%;
+            background: #dc3545;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .btnContactSubmit {
+            width: 50%;
+            border-radius: 1rem;
+            padding: 1.5%;
+            color: #fff;
+            background-color: #0062cc;
+            border: none;
+            cursor: pointer;
+        }
+
+    </style>
 
 
     {{-- About --}}
@@ -258,98 +221,107 @@
     <section>
         <div class="container" style="margin-top: 7%;">
             <h1 class="text-center" style="margin-bottom: 5%; width:80%">Successful stories/ testmonials</h1>
-            <div class="row">
-                <!--Profile Card 5-->
-                <div class="col-md-4 mt-4">
-                    <div class="card profile-card-5">
-                        <div class="card-img-block">
-                            <img class="card-img-top" src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card-body pt-0">
-                            <p class="card-text"><i class="fa fa-quote-left" aria-hidden="true"></i>
-                                Some quick example text to build on the card title and make up the bulk
-                                of the card's content. <i class="fa fa-quote-right" aria-hidden="true"></i>
-                            </p>
-                            <h5 class="card-title" style="float:right">MyName Surname</h5>
 
-
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
 
 
             <div class="container text-center my-3">
                 <h2 class="font-weight-light">Bootstrap 4 - Multi Item Carousel</h2>
                 <div class="row mx-auto my-auto">
                     <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
-                        <div class="carousel-inner w-100" role="listbox">
+                        <div class="carousel-inner w-100">
                             <div class="carousel-item active">
-                                <div class="col-md-4">
-                                    <div class="card card-body">
-                                        <div class="col-md-12 mt-4">
-                                            <div class="card profile-card-5">
-                                                <div class="card-img-block">
-                                                    <img class="card-img-top"
-                                                        src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c"
-                                                        alt="Card image cap">
-                                                </div>
-                                                <div class="card-body pt-0">
-                                                    <p class="card-text"><i class="fa fa-quote-left"
-                                                            aria-hidden="true"></i>
-                                                        Some quick example text to build on the card title and make up
-                                                        the bulk
-                                                        of the card's content. <i class="fa fa-quote-right"
-                                                            aria-hidden="true"></i>
-                                                    </p>
-                                                    <h5 class="card-title" style="float:right">MyName Surname</h5>
+                                <div class="row">
+                                    <div class="col-md-4">
 
-
-                                                </div>
+                                        <div class="card profile-card-5">
+                                            <div class="card-img-block">
+                                                <img class="card-img-top"
+                                                    src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c"
+                                                    alt="Card image cap">
                                             </div>
+                                            <div class="card-body pt-0">
+                                                <p class="card-text"><i class="fa fa-quote-left" aria-hidden="true"></i>
+                                                    Some quick example text to build on the card title and make up
+                                                    the bulk
+                                                    of the card's content. <i class="fa fa-quote-right"
+                                                        aria-hidden="true"></i>
+                                                </p>
+                                                <h5 class="card-title" style="float:right">MyName Surname</h5>
 
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-md-4">
+
+                                        <div class="card profile-card-5">
+                                            <div class="card-img-block">
+                                                <img class="card-img-top"
+                                                    src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c"
+                                                    alt="Card image cap">
+                                            </div>
+                                            <div class="card-body pt-0">
+                                                <p class="card-text"><i class="fa fa-quote-left" aria-hidden="true"></i>
+                                                    Some quick example text to build on the card title and make up
+                                                    the bulk
+                                                    of the card's content. <i class="fa fa-quote-right"
+                                                        aria-hidden="true"></i>
+                                                </p>
+                                                <h5 class="card-title" style="float:right">MyName Surname</h5>
+
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="col-md-4">
+
+                                        <div class="card profile-card-5">
+                                            <div class="card-img-block">
+                                                <img class="card-img-top"
+                                                    src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c"
+                                                    alt="Card image cap">
+                                            </div>
+                                            <div class="card-body pt-0">
+                                                <p class="card-text"><i class="fa fa-quote-left" aria-hidden="true"></i>
+                                                    Some quick example text to build on the card title and make up
+                                                    the bulk
+                                                    of the card's content. <i class="fa fa-quote-right"
+                                                        aria-hidden="true"></i>
+                                                </p>
+                                                <h5 class="card-title" style="float:right">MyName Surname</h5>
+
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card card-body">
+                                            <img class="img-fluid" src="http://placehold.it/380?text=2">
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-md-4">
-                                    <div class="card card-body">
-                                        <img class="img-fluid" src="http://placehold.it/380?text=2">
+                                    <div class="col-md-4">
+                                        <div class="card card-body">
+                                            <img class="img-fluid" src="http://placehold.it/380?text=2">
+                                        </div>
                                     </div>
+
                                 </div>
+
                             </div>
-                            <div class="carousel-item">
-                                <div class="col-md-4">
-                                    <div class="card card-body">
-                                        <img class="img-fluid" src="http://placehold.it/380?text=3">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-md-4">
-                                    <div class="card card-body">
-                                        <img class="img-fluid" src="http://placehold.it/380?text=4">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-md-4">
-                                    <div class="card card-body">
-                                        <img class="img-fluid" src="http://placehold.it/380?text=5">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-md-4">
-                                    <div class="card card-body">
-                                        <img class="img-fluid" src="http://placehold.it/380?text=6">
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                         <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle"
@@ -381,16 +353,15 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" name="txtName" class="form-control" placeholder="Your Name *"
-                                    value="" />
+                                <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
                             </div>
                             <div class="form-group">
                                 <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *"
                                     value="" />
                             </div>
                             <div class="form-group">
-                                <input type="text" name="txtPhone" class="form-control"
-                                    placeholder="Your Phone Number *" value="" />
+                                <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *"
+                                    value="" />
                             </div>
                             <div class="form-group">
                                 <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
@@ -492,9 +463,3 @@
     </script>
 
 @endsection
-
-
-
-
-
-
