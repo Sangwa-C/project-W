@@ -102,6 +102,9 @@
             cursor: pointer;
         }
 
+        .nav-list li a{
+            text-decoration: none;
+        }
     </style>
 
 
@@ -225,7 +228,6 @@
 
 
             <div class="container text-center my-3">
-                <h2 class="font-weight-light">Bootstrap 4 - Multi Item Carousel</h2>
                 <div class="row mx-auto my-auto">
                     <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
                         <div class="carousel-inner w-100">
@@ -305,7 +307,7 @@
                                 </div>
 
                             </div>
-                            <div class="carousel-item">
+                            {{-- <div class="carousel-item">
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="card card-body">
@@ -320,7 +322,7 @@
 
                                 </div>
 
-                            </div>
+                            </div> --}}
 
                         </div>
                         <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
@@ -335,14 +337,13 @@
                         </a>
                     </div>
                 </div>
-                <h5 class="mt-2">Advances one slide at a time</h5>
-            </div>
+              </div>
         </div>
     </section>
 
     {{-- contact form --}}
 
-    <section style="margin-top: 7%; background-color:#d3f3f3">
+    <section style="margin-top: 7%; background-color: #467e8c">
         <div style="padding-top:1%">
             <div class="container contact-form">
                 <div class="contact-image">
@@ -378,65 +379,93 @@
             </div>
         </div>
 
+<br><br>
     </section>
 
     {{-- footer --}}
+<!-- Footer -->
+<footer class="page-footer font-small pt-4 text-light" style="background-color:#386570">
 
-    <footer class="section footer-classic context-dark bg-image text-light" style="background: #2d3246;">
-        <div class="container">
-            <div class="row row-30">
-                <div class="col-md-4 col-xl-5">
-                    <div class="pr-xl-4"><a class="brand img-fluid" href="index.html"><img class="brand-logo-light"
-                                src="assets/img/download.png" alt=""></a>
-                        <p>We are an award-winning creative agency, dedicated to the best result in web design,
-                            promotion, business consulting, and marketing.</p>
-                        <!-- Rights-->
-                        <p class="rights"><span>©  </span><span
-                                class="copyright-year">2018</span><span> </span><span>Waves</span><span>. </span><span>All
-                                Rights Reserved.</span></p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <h5>Contacts</h5>
-                    <dl class="contact-list">
-                        <dt>Address:</dt>
-                        <dd>798 South Park Avenue, Jaipur, Raj</dd>
-                    </dl>
-                    <dl class="contact-list">
-                        <dt>email:</dt>
-                        <dd><a href="mailto:#">dkstudioin@gmail.com</a></dd>
-                    </dl>
-                    <dl class="contact-list">
-                        <dt>phones:</dt>
-                        <dd><a href="tel:#">https://karosearch.com</a> <span>or</span> <a
-                                href="tel:#">https://karosearch.com</a>
-                        </dd>
-                    </dl>
-                </div>
-                <div class="col-md-4 col-xl-3">
-                    <h5>Links</h5>
-                    <ul class="nav-list">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contacts</a></li>
-                        <li><a href="#">Pricing</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="row no-gutters social-container">
-            <div class="col"><a class="social-inner" href="#"><span
-                        class="icon mdi mdi-facebook"></span><span>Facebook</span></a></div>
-            <div class="col"><a class="social-inner" href="#"><span
-                        class="icon mdi mdi-instagram"></span><span>instagram</span></a></div>
-            <div class="col"><a class="social-inner" href="#"><span
-                        class="icon mdi mdi-twitter"></span><span>twitter</span></a></div>
-            <div class="col"><a class="social-inner" href="#"><span
-                        class="icon mdi mdi-youtube-play"></span><span>google</span></a></div>
-        </div>
-    </footer>
+  <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
 
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase">Footer Content</h5>
+          <p>Here you can use rows and columns to organize your footer content.</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled" >
+            <li>
+              <a href="#!" class="text-light">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-light">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-light">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-light">Link 4</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-light">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-light">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-light">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-light">Link 4</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="background-color:black; opacity: 0.3">© 2020 Copyright: Project W
+
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
     <script>
         $('#recipeCarousel').carousel({
             interval: 10000
