@@ -18,7 +18,12 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('Pnbr')->unique();
-            $table->enum('user_type',['enterpreneur', 'investor', 'admin', 'SuperAdmin']);            $table->timestamp('email_verified_at')->nullable();
+            $table->enum('user_type',['enterpreneur', 'investor', 'admin', 'SuperAdmin']);
+            $table->string('user_image')->nullable();
+            $table->string('counrty')->nullable();
+            $table->string('city')->nullable();
+            $table->string('personToContact')->nullable();
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

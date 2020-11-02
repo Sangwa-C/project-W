@@ -117,7 +117,84 @@
             <div class="card-title" style="margin-top: 4%"> <strong>Personal information</strong> </div>
 
             <div class="card-body">
+                <div class="row">
 
+                    @foreach ($userinfo as $info)
+
+
+                        <div class="col-sm-4">
+                            <div class="card" data-toggle="modal" data-target="#e{{ $userinfo->id }}">
+                                <img class="card-img-top" src="public/image/eventsimages/{{ $event->event_image }}"
+                                    alt="story's image" height="200px" width="500px">
+                                <div class="card-body" style="border-style:solid;border-color: #9B9B9B;">
+                                    <h5 class="card-title"> {{ $event->event_name }}</h5>
+                                    <p class="card-title" style="color:#808080">{{ $event->short_desc }}</p>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="card-text"> <span style="color: rgb(29, 151, 207)">Learn more <i
+                                                        class="fa fa-arrow-circle-right" aria-hidden="true"></i></span> </p>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p style="float: right">{{ $event->event_date }}</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="portfolio-modal modal fade bd-example-modal-lg" id="e{{ $event->id }}" tabindex="-1"
+                            role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    {{-- <div class="close-modal" data-dismiss="modal"><img
+                                            src="assets/img/close-icon.svg" alt="Close modal" style="width: 50px" />
+                                    </div> --}}
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-8">
+                                                <div class="modal-body">
+                                                    <!-- Project Details Go Here-->
+                                                    <img class="img-fluid d-block mx-auto"
+                                                        src="public/image/eventsimages/{{ $event->event_image }}" height="300px"
+                                                        width="600px" alt="event image" />
+
+                                                    <br>
+                                                    <h2 class="text-uppercase" style="font-size:15px">
+                                                        {{ $event->event_name }}</h2>
+
+                                                    <hr color="grey"><br><br>
+
+                                                    <p>{{ $event->long_desc }}</p>
+
+
+                                                    <p style="float: right">{{ $event->event_date }}</p>
+
+                                                    <br><br>
+
+
+
+                                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i
+                                                            class="fa fa-times-circle" aria-hidden="true"></i>
+                                                        Close Event</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    @endforeach
+
+
+                </div>
             </div>
         </div>
         <div class="col-sm-6">2</div>
