@@ -111,94 +111,109 @@
 
     </div> --}}
 
-<div class="container">
-    <div class="row">
-        <div class="card col-md-6" >
-            <div class="card-title" style="margin-top: 4%"> <strong>Personal information</strong> </div>
+    <div class="container">
+        <div class="card col-md-12 justify-content-center">
+            <div class="row ">
+                <div class="card-title" style="margin-top: 4%"> <strong>Personal information</strong> </div>
 
-            <div class="card-body">
-                <div class="row">
+                <div class="card-body">
+                    <div class="row ">
+                        <div>
 
-                    @foreach ($userinfo as $info)
-
-
-                        <div class="col-sm-4">
-                            <div class="card" data-toggle="modal" data-target="#e{{ $userinfo->id }}">
-                                <img class="card-img-top" src="public/image/eventsimages/{{ $event->event_image }}"
-                                    alt="story's image" height="200px" width="500px">
-                                <div class="card-body" style="border-style:solid;border-color: #9B9B9B;">
-                                    <h5 class="card-title"> {{ $event->event_name }}</h5>
-                                    <p class="card-title" style="color:#808080">{{ $event->short_desc }}</p>
-
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <p class="card-text"> <span style="color: rgb(29, 151, 207)">Learn more <i
-                                                        class="fa fa-arrow-circle-right" aria-hidden="true"></i></span> </p>
-
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p style="float: right">{{ $event->event_date }}</p>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <br>
-                        </div>
-
-                        <!-- Modal -->
-                        <div class="portfolio-modal modal fade bd-example-modal-lg" id="e{{ $event->id }}" tabindex="-1"
-                            role="dialog" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    {{-- <div class="close-modal" data-dismiss="modal"><img
-                                            src="assets/img/close-icon.svg" alt="Close modal" style="width: 50px" />
-                                    </div> --}}
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-                                            <div class="col-lg-8">
-                                                <div class="modal-body">
-                                                    <!-- Project Details Go Here-->
-                                                    <img class="img-fluid d-block mx-auto"
-                                                        src="public/image/eventsimages/{{ $event->event_image }}" height="300px"
-                                                        width="600px" alt="event image" />
-
-                                                    <br>
-                                                    <h2 class="text-uppercase" style="font-size:15px">
-                                                        {{ $event->event_name }}</h2>
-
-                                                    <hr color="grey"><br><br>
-
-                                                    <p>{{ $event->long_desc }}</p>
-
-
-                                                    <p style="float: right">{{ $event->event_date }}</p>
-
-                                                    <br><br>
-
-
-
-                                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i
-                                                            class="fa fa-times-circle" aria-hidden="true"></i>
-                                                        Close Event</button>
+                            @if (Auth::user()->user_image == '' || Auth::user()->user_image == null)
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <img src="assets\img\avatar.png" alt="" style="border-radius: 50%; width:200px">
+                                        <form class="md-form" action="/image" method="POST">
+                                            <div class="file-field">
+                                                <div class=" btn-sm float-left">
+                                                    <input type="file">
                                                 </div>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
+                                </div>
+
+                            @else
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <img src=" {{ Auth::user()->user_image }}" alt="">
+                                        <form class="md-form" action="/image" method="POST">
+                                            <div class="file-field">
+                                                <div class=" btn-sm float-left">
+                                                    <input type="file">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+
+
+                            @endif
+
+                        </div>
+                    </div>
+                    <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="name">
+                                    <h5>Name</h5>
+                                </label>
+                                <input type="text" class="form-control" placeholder="Full Names"
+                                    value="{{ Auth::user()->name }}" required>
+                                <div class="valid-tooltip">
+                                    Looks good!
+                                </div>
+                            </div>
+
+                        </div>
+                        <h5>Address</h5>
+                        <div class="form-row">
+
+                            <div class="col-md-6 mb-3">
+                                <label for="validationTooltip03">Country</label>
+                                <input type="text" class="form-control" placeholder="Country"
+                                    value="{{ Auth::user()->counrty }}" required>
+                                <div class="invalid-tooltip">
+                                    Please provide a valid Country.
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-3">
+                                <label for="validationTooltip04">City</label>
+                                <input type="text" class="form-control" placeholder="City" value="{{ Auth::user()->city }}"
+                                    required>
+                                <div class="invalid-tooltip">
+                                    Please provide a valid city.
                                 </div>
                             </div>
                         </div>
 
+                        <h5>Person to contact</h5>
+                        <div class="form-row">
 
-
-                    @endforeach
-
-
+                            <div class="col-md-6 mb-3">
+                                <label for="validationTooltip03">Name</label>
+                                <input type="text" class="form-control" placeholder="Full Names"
+                                    value="{{ Auth::user()->prs_name }}" required>
+                                <div class="invalid-tooltip">
+                                    Please provide a valid Name.
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-3">
+                                <label for="validationTooltip04">Phone Number</label>
+                                <input type="text" class="form-control" placeholder="250 700 000 000"
+                                    value="{{ Auth::user()->prs_nbr }}" required>
+                                <div class="invalid-tooltip">
+                                    Please provide a valid Phone NUmber.
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                    </form>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6">2</div>
 
+        </div>
     </div>
-</div>
 @endsection

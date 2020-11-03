@@ -9,7 +9,8 @@ class DashboardController extends Controller
 {
     public function userinfo()
     {
-        $userinfo = DB::table('users')->get();
-        return view('profile', ['profile' => $userinfo]);
+        $userInfor = DB::table('users')->get();
+        // dd($userinfo);
+        return view('profile', ['profile' => $userInfor]);
     }
 }

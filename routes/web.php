@@ -22,7 +22,9 @@ Route::get('/', function () {
 //     return view('profile');
 // });
 
-Route::get('/profile', [App\Http\Controllers\DashboardController::class, 'userinfo']);
+Route::get('/profile','App\Http\Controllers\DashboardController@userinfo');
+
+
 
 Auth::routes();
 
