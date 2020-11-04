@@ -59,8 +59,8 @@
                         <p>Select "Yes" below if you have a certificate issued by RDB authorizing you to work.</p>
                         <hr>
                         <div class="float-right">
-                            <button class="btn btn-secondary" type="button" id="no">No</button>
-                            <button class="btn btn-primary" type="button" id="yes">Yes</button>
+                            <button class="btn btn-secondary" type="button">No</button>
+                            <button class="btn btn-primary" type="button"Yes</button>
                         </div>
 
                     </div>
@@ -112,56 +112,71 @@
     </div> --}}
 
     <div class="container">
-        <div class="card col-md-12 justify-content-center">
-            <div class="row ">
-                <div class="card-title" style="margin-top: 4%"> <strong>Personal information</strong> </div>
+        <div class="card justify-content-center">
+            <h4 class="text-center jumbotron" ><strong>Personal information</strong></h4> <br>
+            <div class="row">
 
-                <div class="card-body">
-                    <div class="row ">
-                        <div>
+                <div class="col-md-4" style="margin: 2%">
+                    <div>
 
-                            @if (Auth::user()->user_image == '' || Auth::user()->user_image == null)
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <img src="assets\img\avatar.png" alt="" style="border-radius: 50%; width:200px">
-                                        <form class="md-form" action="/image" method="POST">
-                                            <div class="file-field">
-                                                <div class=" btn-sm float-left">
-                                                    <input type="file">
-                                                </div>
+                        @if (Auth::user()->user_image == '' || Auth::user()->user_image == null)
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <img src="assets\img\avatar.png" alt="" style="border-radius: 50%; width:200px">
+                                    <form class="md-form" action="/image" method="POST">
+                                        <div class="file-field">
+                                            <div class=" btn-sm float-left">
+                                                <input type="file">
                                             </div>
-                                        </form>
-                                    </div>
+                                        </div>
+                                    </form>
                                 </div>
+                            </div>
 
-                            @else
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <img src=" {{ Auth::user()->user_image }}" alt="">
-                                        <form class="md-form" action="/image" method="POST">
-                                            <div class="file-field">
-                                                <div class=" btn-sm float-left">
-                                                    <input type="file">
-                                                </div>
+                        @else
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <img src=" {{ Auth::user()->user_image }}" alt="">
+                                    <form class="md-form" action="/image" method="POST">
+                                        <div class="file-field">
+                                            <div class=" btn-sm float-left">
+                                                <input type="file">
                                             </div>
-                                        </form>
-                                    </div>
+                                        </div>
+                                    </form>
                                 </div>
+                            </div>
 
 
 
-                            @endif
+                        @endif
 
-                        </div>
                     </div>
-                    <form class="needs-validation" novalidate>
+                </div>
+                <div class="col-md-7">
+                    <form action="/updateUser/{{ Auth::user()->id }}" method="post" accept-charset="utf-8"
+                        enctype="multipart/form-data">
+                        @csrf
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
                                 <label for="name">
                                     <h5>Name</h5>
                                 </label>
-                                <input type="text" class="form-control" placeholder="Full Names"
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Full Names"
                                     value="{{ Auth::user()->name }}" required>
+                                <div class="valid-tooltip">
+                                    Looks good!
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="name">
+                                    <h5>Phone Number</h5>
+                                </label>
+                                <input type="text" name="Pnbr" id="Pnbr" class="form-control" placeholder="250 700 000 000"
+                                    value="{{ Auth::user()->Pnbr }}" required>
                                 <div class="valid-tooltip">
                                     Looks good!
                                 </div>
@@ -173,7 +188,7 @@
 
                             <div class="col-md-6 mb-3">
                                 <label for="validationTooltip03">Country</label>
-                                <input type="text" class="form-control" placeholder="Country"
+                                <input type="text" name="counrty" id="counrty" class="form-control" placeholder="Country"
                                     value="{{ Auth::user()->counrty }}" required>
                                 <div class="invalid-tooltip">
                                     Please provide a valid Country.
@@ -181,7 +196,7 @@
                             </div>
                             <div class="col-md-5 mb-3">
                                 <label for="validationTooltip04">City</label>
-                                <input type="text" class="form-control" placeholder="City" value="{{ Auth::user()->city }}"
+                                <input type="text" name="city" id="city" class="form-control" placeholder="City" value="{{ Auth::user()->city }}"
                                     required>
                                 <div class="invalid-tooltip">
                                     Please provide a valid city.
@@ -194,7 +209,7 @@
 
                             <div class="col-md-6 mb-3">
                                 <label for="validationTooltip03">Name</label>
-                                <input type="text" class="form-control" placeholder="Full Names"
+                                <input type="text" name="prs_name" id="prs_name" class="form-control" placeholder="Full Names"
                                     value="{{ Auth::user()->prs_name }}" required>
                                 <div class="invalid-tooltip">
                                     Please provide a valid Name.
@@ -202,7 +217,7 @@
                             </div>
                             <div class="col-md-5 mb-3">
                                 <label for="validationTooltip04">Phone Number</label>
-                                <input type="text" class="form-control" placeholder="250 700 000 000"
+                                <input type="text" name="prs_nbr" id="prs_nbr" class="form-control" placeholder="250 700 000 000"
                                     value="{{ Auth::user()->prs_nbr }}" required>
                                 <div class="invalid-tooltip">
                                     Please provide a valid Phone NUmber.
@@ -212,8 +227,9 @@
                         <button class="btn btn-primary" type="submit">Submit form</button>
                     </form>
                 </div>
-            </div>
 
+            </div>
         </div>
+
     </div>
 @endsection

@@ -1,28 +1,3 @@
-{{-- @extends('layouts.app')
-
-@section('content')
-<div class="container" style="margin-top:10%">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection --}}
-
 <!DOCTYPE html>
 <html>
 
@@ -31,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Collapsible sidebar using Bootstrap 4</title>
+    <title>Dashboard</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -59,7 +34,7 @@
         <!-- Sidebar Holder -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Dashboard</h3>
+                <h3><a href="/home">Dashboard</a> </h3>
             </div>
 
             <ul class="list-unstyled components">
@@ -79,7 +54,18 @@
                     </ul>
                 </li> --}}
                 <li>
-                    <a href="profile">Profile</a> {{-- both ent & inv --}}
+
+                    <a href="#profileInfo" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Profile</a>
+                    <ul class="collapse list-unstyled" id="profileInfo">
+                        <li>
+                            <a href="profile">Personal information </a>
+                        </li>
+                        <li>
+                            <a href="personCause">Business idea</a>
+                        </li>
+
+                    </ul>
                     <a href="#">Notification</a> {{-- both ent & inv --}}
                     <a href="#">Chat With us</a> {{-- both ent & inv &  admin to answer --}}
                     <a href="#">Users</a> {{-- Admin--}}

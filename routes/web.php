@@ -24,6 +24,9 @@ Route::get('/', function () {
 
 Route::get('/profile','App\Http\Controllers\DashboardController@userinfo');
 
+Route::get('/personCause','App\Http\Controllers\DashboardController@personCause');
+
+Route::post('updateUser/{id}','App\Http\Controllers\DashboardController@updateUser');
 
 
 Auth::routes();
