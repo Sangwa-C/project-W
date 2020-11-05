@@ -6,7 +6,9 @@
         #uploadRegistration {
             display: none;
         }
-
+        #uploadTeamMembers{
+            display: none;
+        }
     </style>
 
 
@@ -44,17 +46,20 @@
                     </div>
 
                 </div>
+                <div id="uploadRegistration">
+                    <div class="form-group row" >
+                        <label for="pjt_desc" class="col-sm-2 col-form-label">Upload Your proof of registration</label>
 
-                <div class="form-group row" id="uploadRegistration">
-                    <label for="pjt_desc" class="col-sm-2 col-form-label">Upload Your proof of registration</label>
+                        <div class="col-sm-10 custom-file">
+                            <div class="file-field">
+                                <input type="file" class="form-control">
+                            </div>
 
-                    <div class="col-sm-10 custom-file">
-                        <div class="file-field">
-                            <input type="file" class="form-control">
                         </div>
-
                     </div>
                 </div>
+
+
 
 
                 <div class="form-group row">
@@ -62,28 +67,32 @@
 
                     <label for="pjt_desc" class="col-sm-2 col-form-label">do you have a team</label>
                     <div class="col-sm-10">
-                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                        <select class="custom-select my-1 mr-sm-2" id="havingATeam" onchange="team()">
                             <option selected>Choose...</option>
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
+                            <option value="iDo" id="iDo">Yes</option>
+                            <option value="iDoNot" id="iDoNot">No</option>
                         </select>
                     </div>
                 </div>
 
-                <div class="form-group row">
-                    <label for="pjt_desc" class="col-sm-2 col-form-label">Team members</label>
-                    <div class="col-sm-10">
-                        <textarea type="text" class="form-control" name="pjt_desc" id="pjt_desc"
-                            placeholder="Firstname Lastname: 0700 000 000"></textarea>
+                <div id="uploadTeamMembers">
+                    <div class="form-group row" >
+                        <label for="pjt_desc" class="col-sm-2 col-form-label" >Team members</label>
+                        <div class="col-sm-10">
+                            <textarea type="text" class="form-control" name="pjt_desc" id="pjt_desc"
+                                placeholder="Firstname Lastname: 0700 000 000"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="pjt_name" class="col-sm-2 col-form-label">Postion</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="pjt_name" id="pjt_name" placeholder="ex: I'm the CEO">
+                        </div>
                     </div>
                 </div>
 
-                <div class="form-group row">
-                    <label for="pjt_name" class="col-sm-2 col-form-label">Postion</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" name="pjt_name" id="pjt_name" placeholder="ex: I'm the CEO">
-                    </div>
-                </div>
+
 
                 <div class="form-group row">
                     <div class="col-sm-10">
