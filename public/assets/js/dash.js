@@ -1,7 +1,7 @@
 
 
 function getSelectValue() {
-    var selectedValue = document.getElementById("inlineFormCustomSelectPref").value;
+    var selectedValue = document.getElementById("areYourRegistred").value;
     var uploadRegistration = '';
     if (selectedValue == "yes") {
         document.getElementById("uploadRegistration").style.display = "block";
@@ -33,3 +33,5 @@ function team() {
 //     });
 
 // });
+
+
