@@ -41,6 +41,18 @@
                     </div>
                 </div>
                 <div class="form-group row">
+                    <label for="pjt_desc" class="col-sm-2 col-form-label">Which sector are you in</label>
+                    <div class="col-sm-10">
+                        <select class="custom-select my-1 mr-sm-2" name="sector" id="sector">
+                            <option selected disabled>Choose...</option>
+                            @foreach ($sector as $business)
+                                <option value="{{ $business->id }}">{{ $business->sectorName }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
                     <label for="pjt_desc" class="col-sm-2 col-form-label">Description</label>
                     <div class="col-sm-10">
                         <textarea type="text" class="form-control" name="pjt_desc" id="pjt_desc"
@@ -97,6 +109,9 @@
                             <option value="iDoNot" id="iDoNot">No</option>
                         </select>
                     </div>
+
+
+
                 </div>
 
                 <div id="uploadTeamMembers">
@@ -118,6 +133,65 @@
                 </div>
 
 
+
+                <div class="modal-footer">
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+                </div>
+            </form>
+
+        </div>
+        <br><br>
+
+        <div class="card justify-content-center">
+            <h4 class="text-center jumbotron"><strong>help you offer</strong></h4> <br>
+            <form action="/registerIdea" method="post" accept-charset="utf-8" enctype="multipart/form-data"
+                style="margin:3%">
+                @csrf
+
+                <div class="form-group row">
+                    <label for="pjt_desc" class="col-sm-2 col-form-label">legal status</label>
+                    <div class="col-sm-10">
+                        <select class="custom-select my-1 mr-sm-2" name="sector" id="sector">
+                            <option selected  disabled>Choose...</option>
+                                <option value="organisation">Organisation</option>
+                                <option value="individual">Individual</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="pjt_desc" class="col-sm-2 col-form-label">Which sector do you want to in</label>
+                    <div class="col-sm-10">
+                        <select class="custom-select my-1 mr-sm-2" name="sector" id="sector">
+                            <option selected  disabled>Choose...</option>
+                            @foreach ($sector as $business)
+                                <option value="{{ $business->id }}">{{ $business->sectorName }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="pjt_desc" class="col-sm-2 col-form-label">help you offer</label>
+                    <div class="col-sm-10">
+                        <select class="custom-select my-1 mr-sm-2" name="havingATeam" id="havingATeam">
+                            <option selected disabled>Choose...</option>
+                            <option value="mentorship" id="mentorship">mentorship</option>
+                            <option value="money" id="money">Investment (money)</option>
+                            <option value="both" id="both">both</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="spt_desc" class="col-sm-2 col-form-label">explain briefly the support your offering</label>
+                    <div class="col-sm-10">
+                        <textarea type="text" class="form-control" name="spt_desc" id="spt_desc"
+                            placeholder="ex:  i want to offer mentorship to startup businesses"></textarea>
+                    </div>
+                </div>
 
                 <div class="modal-footer">
 

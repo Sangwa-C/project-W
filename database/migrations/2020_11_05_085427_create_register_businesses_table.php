@@ -17,6 +17,7 @@ class CreateRegisterBusinessesTable extends Migration
             $table->increments('id');
             $table->integer('userId')->unsigned();
             $table->string('pjt_name');
+            $table->string('sector');
             $table->longText('pjt_desc');
             $table->string('areYourRegistred');
             $table->string('registrationProof')->nullable();

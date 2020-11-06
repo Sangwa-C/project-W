@@ -42,6 +42,7 @@ class DashboardController extends Controller
 
     public function registerIdea(Request $request)
     {
+        
         if ($request->registrationProof == true) {
             request()->validate([
                 'registrationProof' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -51,6 +52,8 @@ class DashboardController extends Controller
 
             $registerBusiness = new registerBusiness();
             $registerBusiness->pjt_name = $request->get('pjt_name');
+            $registerBusiness->sector =$request->get('sector');
+
             $registerBusiness->pjt_desc = $request->get('pjt_desc');
             $registerBusiness->areYourRegistred = $request->get('areYourRegistred');
             $registerBusiness->userId=Auth::user()->id;
@@ -71,6 +74,13 @@ class DashboardController extends Controller
             $registerBusiness->save();
 
             return view('profile');
+
+    }
+
+    public function sector()
+    {
+        $sector = DB::table('sectors')->where('status','1')->get();
+        return view('personCause',compact('sector',));
 
     }
 
