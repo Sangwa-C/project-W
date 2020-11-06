@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 // Route::get('/profile', function () {
-//     return view('profile'); registerIdea
+//     return view('profile'); registerIdea offerSupport
 // });
 
 Route::get('/profile','App\Http\Controllers\DashboardController@userinfo');
@@ -29,6 +29,9 @@ Route::get('/personCause','App\Http\Controllers\DashboardController@sector');
 Route::post('updateUser/{id}','App\Http\Controllers\DashboardController@updateUser');
 
 Route::post('registerIdea','App\Http\Controllers\DashboardController@registerIdea');
+
+Route::post('offerSupport','App\Http\Controllers\DashboardController@offerSupport');
+
 
 Auth::routes();
 

@@ -21,6 +21,7 @@ class CreateRegisterBusinessesTable extends Migration
             $table->longText('pjt_desc');
             $table->string('areYourRegistred');
             $table->string('registrationProof')->nullable();
+            $table->string('support');
             $table->string('havingATeam');
             $table->longText('teamContacts')->nullable();
             $table->string('position')->nullable();

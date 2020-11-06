@@ -14,7 +14,13 @@ class CreateInvestorsTable extends Migration
     public function up()
     {
         Schema::create('investors', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('bns_email');
+            $table->string('bns_phn_number');
+            $table->string('legal_status');
+            $table->string('sector');
+            $table->string('support');
+            $table->longText('spt_desc');
             $table->timestamps();
         });
     }

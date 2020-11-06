@@ -95,8 +95,17 @@
                     </div>
                 </div>
 
-
-
+                <div class="form-group row">
+                    <label for="support" class="col-sm-2 col-form-label">type of support you need</label>
+                    <div class="col-sm-10">
+                        <select class="custom-select my-1 mr-sm-2" name="support">
+                            <option selected disabled>Choose...</option>
+                            <option value="mentorship" id="mentorship">mentorship</option>
+                            <option value="money" id="money">Investment (money)</option>
+                            <option value="both" id="both">both</option>
+                        </select>
+                    </div>
+                </div>
 
                 <div class="form-group row">
 
@@ -109,9 +118,6 @@
                             <option value="iDoNot" id="iDoNot">No</option>
                         </select>
                     </div>
-
-
-
                 </div>
 
                 <div id="uploadTeamMembers">
@@ -145,15 +151,28 @@
         <br><br>
 
         <div class="card justify-content-center">
-            <h4 class="text-center jumbotron"><strong>help you offer</strong></h4> <br>
-            <form action="/registerIdea" method="post" accept-charset="utf-8" enctype="multipart/form-data"
+            <h4 class="text-center jumbotron"><strong>Support you offer</strong></h4> <br>
+            <form action="/offerSupport" method="post" accept-charset="utf-8" enctype="multipart/form-data"
                 style="margin:3%">
                 @csrf
-
                 <div class="form-group row">
-                    <label for="pjt_desc" class="col-sm-2 col-form-label">legal status</label>
+                    <label for="email" class="col-sm-2 col-form-label">Business email</label>
                     <div class="col-sm-10">
-                        <select class="custom-select my-1 mr-sm-2" name="sector" id="sector">
+                        <input type="text" class="form-control" name="bns_email" id="bns_email"
+                            placeholder="userEmail@email.com">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="number" class="col-sm-2 col-form-label">Business Phone Number</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="bns_phn_number" id="bns_phn_number"
+                            placeholder="0700 000 000">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="legal_status" class="col-sm-2 col-form-label">legal status</label>
+                    <div class="col-sm-10">
+                        <select class="custom-select my-1 mr-sm-2" name="legal_status" id="legal_status">
                             <option selected  disabled>Choose...</option>
                                 <option value="organisation">Organisation</option>
                                 <option value="individual">Individual</option>
@@ -162,7 +181,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="pjt_desc" class="col-sm-2 col-form-label">Which sector do you want to in</label>
+                    <label for="sector" class="col-sm-2 col-form-label">Which sector do you want to invest in in</label>
                     <div class="col-sm-10">
                         <select class="custom-select my-1 mr-sm-2" name="sector" id="sector">
                             <option selected  disabled>Choose...</option>
@@ -174,9 +193,9 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="pjt_desc" class="col-sm-2 col-form-label">help you offer</label>
+                    <label for="support" class="col-sm-2 col-form-label">help you offer</label>
                     <div class="col-sm-10">
-                        <select class="custom-select my-1 mr-sm-2" name="havingATeam" id="havingATeam">
+                        <select class="custom-select my-1 mr-sm-2" name="support" id="support">
                             <option selected disabled>Choose...</option>
                             <option value="mentorship" id="mentorship">mentorship</option>
                             <option value="money" id="money">Investment (money)</option>

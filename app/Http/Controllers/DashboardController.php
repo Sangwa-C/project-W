@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\investors;
 use App\Models\registerBusiness;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -42,7 +43,7 @@ class DashboardController extends Controller
 
     public function registerIdea(Request $request)
     {
-        
+
         if ($request->registrationProof == true) {
             request()->validate([
                 'registrationProof' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -63,9 +64,10 @@ class DashboardController extends Controller
                 $files->move($destinationPath, $registrationImage);
                 $insert['registrationProof'] = "$registrationImage";
             }
-            // dd($registrationImage);
+            // dd($registrationImage); support
 
             $registerBusiness->registrationProof = $registrationImage;
+            $registerBusiness->support = $request->get('support');
             $registerBusiness->havingATeam = $request->get('havingATeam');
             $registerBusiness->teamContacts = $request->get('teamContacts');
             $registerBusiness->position = $request->get('position');
@@ -83,6 +85,18 @@ class DashboardController extends Controller
         return view('personCause',compact('sector',));
 
     }
+    public function offerSupport(Request $request)
+    {
+            $offerSupport = new investors();
+            $offerSupport->legal_status = $request->get('legal_status');
+            $offerSupport->sector =$request->get('sector');
+            $offerSupport->support = $request->get('support');
+            $offerSupport->spt_desc = $request->get('spt_desc');
+            // dd($offerSupport);
+            $offerSupport->save();
 
+            return view('home');
+
+    }
 
 }
