@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\registerBusiness;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
@@ -41,15 +42,18 @@ class DashboardController extends Controller
 
     public function registerIdea(Request $request)
     {
-
+        if ($request->registrationProof == true) {
             request()->validate([
                 'registrationProof' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
+        }
+
+
             $registerBusiness = new registerBusiness();
             $registerBusiness->pjt_name = $request->get('pjt_name');
             $registerBusiness->pjt_desc = $request->get('pjt_desc');
             $registerBusiness->areYourRegistred = $request->get('areYourRegistred');
-
+            $registerBusiness->userId=Auth::user()->id;
             if ($files = $request->file('registrationProof')) {
                 $destinationPath = 'public/image/registrationImagesProofs/'; // upload path
                 $registrationImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
@@ -62,6 +66,7 @@ class DashboardController extends Controller
             $registerBusiness->havingATeam = $request->get('havingATeam');
             $registerBusiness->teamContacts = $request->get('teamContacts');
             $registerBusiness->position = $request->get('position');
+
             // dd($registerBusiness);
             $registerBusiness->save();
 

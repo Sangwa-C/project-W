@@ -15,6 +15,7 @@ class CreateRegisterBusinessesTable extends Migration
     {
         Schema::create('register_businesses', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('userId')->unsigned();
             $table->string('pjt_name');
             $table->longText('pjt_desc');
             $table->string('areYourRegistred');
@@ -22,6 +23,7 @@ class CreateRegisterBusinessesTable extends Migration
             $table->string('havingATeam');
             $table->longText('teamContacts')->nullable();
             $table->string('position')->nullable();
+            $table->foreign('userId')->references('id')->on('users');
             $table->timestamps();
         });
     }
