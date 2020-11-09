@@ -78,10 +78,10 @@
                     <thead>
                       <tr>
                         <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Address</th>
+                        <th>UserType</th>
                         <th>Salary</th>
                       </tr>
                     </thead>
