@@ -24,6 +24,8 @@ Route::get('/', function () {
 
 Route::get('/profile','App\Http\Controllers\DashboardController@userinfo');
 
+Route::get('/allUsers','App\Http\Controllers\DashboardController@allUsers');
+
 Route::get('/personCause','App\Http\Controllers\DashboardController@sector');
 
 Route::post('updateUser/{id}','App\Http\Controllers\DashboardController@updateUser');

@@ -14,7 +14,7 @@ class DashboardController extends Controller
     public function userinfo()
     {
         $userInfor = DB::table('users')->get();
-        // dd($userinfo);
+        // dd($userinfo); allUsers
         return view('profile', ['profile' => $userInfor]);
     }
 
@@ -97,6 +97,13 @@ class DashboardController extends Controller
 
             return view('home');
 
+    }
+
+    public function allUsers()
+    {
+        $allUsers = DB::table('users')->get();
+        // dd($userinfo);
+        return view('allUsers', ['profile' => $allUsers]);
     }
 
 }
