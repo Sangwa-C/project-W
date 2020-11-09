@@ -20,11 +20,13 @@ class User extends Authenticatable
         'name',
         'email',
         'Pnbr',
+        'user_type',
         'password',
         'counrty',
         'city',
         'prs_name',
         'prs_nbr',
+
     ];
 
     /**
