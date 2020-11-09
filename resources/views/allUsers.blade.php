@@ -82,20 +82,21 @@
                         <th>Phone Number</th>
                         <th>Address</th>
                         <th>UserType</th>
-                        <th>Salary</th>
+                        <th>Action</th>
                       </tr>
                     </thead>
                     <tfoot>
                       <tr>
                         <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Address</th>
+                        <th>UserType</th>
+                        <th>Action</th>
                       </tr>
                     </tfoot>
                     <tbody>
+                        
                       <tr>
                         <td>Tiger Nixon</td>
                         <td>System Architect</td>
@@ -103,14 +104,6 @@
                         <td>61</td>
                         <td>2011/04/25</td>
                         <td>$320,800</td>
-                      </tr>
-                      <tr>
-                        <td>Garrett Winters</td>
-                        <td>Accountant</td>
-                        <td>Tokyo</td>
-                        <td>63</td>
-                        <td>2011/07/25</td>
-                        <td>$170,750</td>
                       </tr>
 
                     </tbody>

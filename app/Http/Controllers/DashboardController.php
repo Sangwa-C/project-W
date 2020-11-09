@@ -102,8 +102,8 @@ class DashboardController extends Controller
     public function allUsers()
     {
         $allUsers = DB::table('users')->get();
-        // dd($userinfo);
-        return view('allUsers', ['profile' => $allUsers]);
+        dd($allUsers);
+        return view('allUsers',compact('allUsers',));
     }
 
 }
