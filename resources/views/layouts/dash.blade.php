@@ -68,7 +68,7 @@
                     </ul>
                     <a href="#">Notification</a> {{-- both ent & inv --}}
                     <a href="#">Chat With us</a> {{-- both ent & inv &  admin to answer --}}
-                    <a href="#">Users</a> {{-- Admin--}}
+                    <a href="/allUsers">Users</a> {{-- Admin--}}
                     <a href="#">Aprove user</a> {{-- super admin --}}
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
                         class="dropdown-toggle">Pages</a>
