@@ -105,8 +105,10 @@ class DashboardController extends Controller
     {
         $userinfo = DB::table('users')->get();
         $userproject = DB::table('register_businesses')->get();
-        $userProfile = $userinfo.Concat($userproject);
-        dd($userProfile);
+        // dd($userproject);
+        // $userProfile = array_merge($userproject, $userinfo);
+        $userProfile = (object) array_merge((array) $userinfo, (array) $userproject);
+        dd($userProfile,);
         return view('allUsers', compact('userinfo',));
     }
 
