@@ -46,22 +46,35 @@
                         </ul>
                         <a href="#">Notification</a> {{-- both ent & inv --}}
                         <a href="#">Chat With us</a> {{-- both ent & inv &  admin to answer --}}
-                    </li>
+
                         @if (Auth::user()->user_type =="admin" || Auth::user()->user_type =="SuperAdmin" )
-                        <a href="/allUsers">Users</a> {{-- Admin--}}
-                        <a href="#">Aprove user</a> {{-- super admin --}}
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
+
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle text-success">Users In the system</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li>
+                                    <a href="/allUsers">Admin Users</a> {{-- Admin--}}
+                                </li>
+                                <li>
+                                    <a href="/allUsers">Investors</a> {{-- Admin--}}
+                                </li>
+                                <li>
+                                    <a href="/allUsers">Enterprenuer</a> {{-- Admin--}}
+                                </li>
+                            </ul>
+
+                            <a href="#Request" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle text-success">Request</a>
+                            <ul class="collapse list-unstyled" id="Request">
+                                <li>
+                                    <a href="/allUsers">Investores Request</a> {{-- Admin--}}
+                                </li>
+                                <li>
+                                    <a href="/allUsers">Enterprenuer Request</a> {{-- Admin--}}
+                                </li>
+                                <li>
+                                    <a href="#">Aprove user</a> {{-- super admin --}}
+                                </li>
+                            </ul>
+
                     @endif
 
                 </li>
@@ -81,9 +94,6 @@
                         <span></span>
                         <span></span>
                     </button>
-
-
-
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

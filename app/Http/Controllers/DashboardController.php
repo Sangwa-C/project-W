@@ -94,6 +94,8 @@ class DashboardController extends Controller
             $offerSupport->sector =$request->get('sector');
             $offerSupport->support = $request->get('support');
             $offerSupport->spt_desc = $request->get('spt_desc');
+            $offerSupport->bns_email = $request->get('bns_email');
+            $offerSupport->bns_phn_number = $request->get('bns_phn_number');
             // dd($offerSupport);
             $offerSupport->save();
 
@@ -108,7 +110,7 @@ class DashboardController extends Controller
         // dd($userproject);
         // $userProfile = array_merge($userproject, $userinfo);
         $userProfile = (object) array_merge((array) $userinfo, (array) $userproject);
-        dd($userProfile,);
+
         return view('allUsers', compact('userinfo',));
     }
 
