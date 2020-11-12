@@ -8,6 +8,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use PhpParser\Node\Expr\AssignOp\Concat;
+use PhpParser\Node\Expr\BinaryOp\Concat as BinaryOpConcat;
 
 class DashboardController extends Controller
 {
@@ -101,9 +103,13 @@ class DashboardController extends Controller
 
     public function allUsers()
     {
-        $allUsers = DB::table('users')->get();
-        // dd($userinfo);
-        return view('allUsers', ['profile' => $allUsers]);
+        $userinfo = DB::table('users')->get();
+        $userproject = DB::table('register_businesses')->get();
+        // dd($userproject);
+        // $userProfile = array_merge($userproject, $userinfo);
+        $userProfile = (object) array_merge((array) $userinfo, (array) $userproject);
+        dd($userProfile,);
+        return view('allUsers', compact('userinfo',));
     }
 
 }
