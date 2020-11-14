@@ -27,6 +27,7 @@
 
 
     <div class="container">
+        @if (Auth::user()->user_type =="enterpreneur")
         <div class="card justify-content-center">
             <h4 class="text-center jumbotron"><strong>Business Idea</strong></h4> <br>
             <form action="/registerIdea" method="post" accept-charset="utf-8" enctype="multipart/form-data"
@@ -148,8 +149,9 @@
             </form>
 
         </div>
-        <br><br>
-
+        @endif
+        {{-- <br><br> --}}
+        @if (Auth::user()->user_type =="investor")
         <div class="card justify-content-center">
             <h4 class="text-center jumbotron"><strong>Support you offer</strong></h4> <br>
             <form action="/offerSupport" method="post" accept-charset="utf-8" enctype="multipart/form-data"
@@ -220,6 +222,9 @@
             </form>
 
         </div>
+        @endif
+
+
 
 
     </div>

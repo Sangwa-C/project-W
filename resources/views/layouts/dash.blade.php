@@ -38,36 +38,24 @@
             </div>
 
             <ul class="list-unstyled components">
-                <p>Dummy Heading</p>
-                {{-- <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Home 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 3</a>
-                        </li>
-                    </ul>
-                </li> --}}
+                <p>Dashboard</p>
+
                 <li>
 
                     <a href="#profileInfo" data-toggle="collapse" aria-expanded="false"
                         class="dropdown-toggle">Profile</a>
                     <ul class="collapse list-unstyled" id="profileInfo">
                         <li>
-                            <a href="profile">Personal information </a>
+                            <a href="/profile">Personal information </a>
                         </li>
                         <li>
-                            <a href="personCause">Business idea</a>
+                            <a href="/personCause">Business idea</a>
                         </li>
 
                     </ul>
                     <a href="#">Notification</a> {{-- both ent & inv --}}
                     <a href="#">Chat With us</a> {{-- both ent & inv &  admin to answer --}}
+                    @if (Auth::user()->user_type =="admin" || Auth::user()->user_type =="SuperAdmin" )
                     <a href="/allUsers">Users</a> {{-- Admin--}}
                     <a href="#">Aprove user</a> {{-- super admin --}}
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
@@ -83,6 +71,8 @@
                             <a href="#">Page 3</a>
                         </li>
                     </ul>
+                    @endif
+
                 </li>
             </ul>
 
