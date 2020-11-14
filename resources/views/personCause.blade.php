@@ -160,21 +160,21 @@
                 <div class="form-group row">
                     <label for="email" class="col-sm-2 col-form-label">Business email</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="bns_email" id="bns_email"
+                        <input type="text" class="form-control" required name="bns_email" id="bns_email"
                             placeholder="userEmail@email.com">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="number" class="col-sm-2 col-form-label">Business Phone Number</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="bns_phn_number" id="bns_phn_number"
+                        <input type="text" class="form-control" required name="bns_phn_number" id="bns_phn_number"
                             placeholder="0700 000 000">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="legal_status" class="col-sm-2 col-form-label">legal status</label>
                     <div class="col-sm-10">
-                        <select class="custom-select my-1 mr-sm-2" name="legal_status" id="legal_status">
+                        <select class="custom-select my-1 mr-sm-2" required name="legal_status" id="legal_status">
                             <option selected  disabled>Choose...</option>
                                 <option value="organisation">Organisation</option>
                                 <option value="individual">Individual</option>
@@ -185,7 +185,7 @@
                 <div class="form-group row">
                     <label for="sector" class="col-sm-2 col-form-label">Which sector do you want to invest in in</label>
                     <div class="col-sm-10">
-                        <select class="custom-select my-1 mr-sm-2" name="sector" id="sector">
+                        <select class="custom-select my-1 mr-sm-2" required name="sector" id="sector">
                             <option selected  disabled>Choose...</option>
                             @foreach ($sector as $business)
                                 <option value="{{ $business->id }}">{{ $business->sectorName }}</option>
@@ -197,7 +197,7 @@
                 <div class="form-group row">
                     <label for="support" class="col-sm-2 col-form-label">help you offer</label>
                     <div class="col-sm-10">
-                        <select class="custom-select my-1 mr-sm-2" name="support" id="support">
+                        <select class="custom-select my-1 mr-sm-2" required name="support" id="support">
                             <option selected disabled>Choose...</option>
                             <option value="mentorship" id="mentorship">mentorship</option>
                             <option value="money" id="money">Investment (money)</option>
