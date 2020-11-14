@@ -67,10 +67,10 @@
                             <a href="#Request" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle ">Request</a>
                             <ul class="collapse list-unstyled" id="Request">
                                 <li>
-                                    <a href="/allUsers">Investores Request</a> {{-- Admin--}}
+                                    <a href="/InvestoresRequest">Investores Request</a> {{-- Admin--}}
                                 </li>
                                 <li>
-                                    <a href="/allUsers">Enterprenuer Request</a> {{-- Admin--}}
+                                    <a href="/EnterprenuerRequest">Enterprenuer Request</a> {{-- Admin--}}
                                 </li>
                                 <li>
                                     <a href="#">Aprove user</a> {{-- super admin --}}

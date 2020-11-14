@@ -100,4 +100,9 @@ class DashboardController extends Controller
         $userinfo = DB::table('users')->get()->toArray();
         return view('home.Enterprenuer', compact('userinfo',));
     }
+    public function FunctionName()
+    {
+        # code...
+    }
+
 }
