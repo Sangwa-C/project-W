@@ -15,7 +15,6 @@
     <!-- Font Awesome JS -->
 
     <link rel="stylesheet" href="assets\css\dash.css">
-`
     <script src="assets\js\dash.js"></script>
 
 </head>
