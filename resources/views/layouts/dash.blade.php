@@ -49,20 +49,22 @@
 
                         @if (Auth::user()->user_type =="admin" || Auth::user()->user_type =="SuperAdmin" )
 
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle text-success">Users In the system</a>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle ">Users In the system</a>
                             <ul class="collapse list-unstyled" id="pageSubmenu">
+                                @if (Auth::user()->user_type =="SuperAdmin"  )
                                 <li>
                                     <a href="/allUsers">Admin Users</a> {{-- Admin--}}
                                 </li>
+                                @endif
                                 <li>
-                                    <a href="/allUsers">Investors</a> {{-- Admin--}}
+                                    <a href="/Investors">Investors</a> {{-- Admin--}}
                                 </li>
                                 <li>
-                                    <a href="/allUsers">Enterprenuer</a> {{-- Admin--}}
+                                    <a href="/Enterprenuer">Enterprenuer</a> {{-- Admin--}}
                                 </li>
                             </ul>
 
-                            <a href="#Request" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle text-success">Request</a>
+                            <a href="#Request" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle ">Request</a>
                             <ul class="collapse list-unstyled" id="Request">
                                 <li>
                                     <a href="/allUsers">Investores Request</a> {{-- Admin--}}

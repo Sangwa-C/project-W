@@ -33,7 +33,7 @@
         <div class="container-fluid">
 
             <!-- Page Heading -->
-            <h1 class="h3 mb-2 text-gray-800">User who are Admin and </h1>
+            <h1 class="h3 mb-2 text-gray-800">User who are Investors</h1>
 
 
             <!-- DataTales Example -->
@@ -73,6 +73,7 @@
 
 
                                     @foreach ($userinfo as $user)
+                                    @if ($user->user_type =="enterpreneur"  )
                                     <tr>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
@@ -84,6 +85,7 @@
                                         <td> <a href="changingstutas/{{ $user->id }}">{{ $user->user_type }}</a> </td>
                                         @endif
                                     </tr>
+                                    @endif
                                     @endforeach
 
                             </tbody>
