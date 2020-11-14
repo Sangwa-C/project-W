@@ -38,6 +38,7 @@ Route::post('offerSupport', 'App\Http\Controllers\DashboardController@offerSuppo
 
 Route::get('/Investors', 'App\Http\Controllers\DashboardController@Investors');
 Route::get('/Enterprenuer', 'App\Http\Controllers\DashboardController@Enterprenuer');
+Route::get('/InvestoresRequest', 'App\Http\Controllers\DashboardController@InvestoresRequest');
 
 // view()->composer(['*'], function($view) {
 
