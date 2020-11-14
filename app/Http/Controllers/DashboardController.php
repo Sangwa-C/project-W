@@ -101,15 +101,15 @@ class DashboardController extends Controller
 
     }
 
-    public function allUsers()
-    {
-        $userinfo = DB::table('users')->get();
-        $userproject = DB::table('register_businesses')->get();
-        // dd($userproject);
-        // $userProfile = array_merge($userproject, $userinfo);
-        $userProfile = (object) array_merge((array) $userinfo, (array) $userproject);
-        dd($userProfile,);
-        return view('allUsers', compact('userinfo',));
-    }
+    // public function allUsers()
+    // {
+    //     $userinfo = DB::table('users')->get();
+    //     $userproject = DB::table('register_businesses')->get();
+    //     // dd($userproject);
+    //     // $userProfile = array_merge($userproject, $userinfo);
+    //     $userProfile = (object) array_merge((array) $userinfo, (array) $userproject);
+    //     dd($userProfile,);
+    //     return view('allUsers', compact('userinfo',));
+    // }
 
 }
