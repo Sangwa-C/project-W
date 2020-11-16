@@ -102,8 +102,8 @@ class DashboardController extends Controller
     }
     public function InvestoresRequest()
     {
-        $userinfo = DB::table('users')->get()->toArray();
-        return view('home.InvestoresRequest', compact('userinfo',));
+        $investorInfo = DB::table('investors')->get()->toArray();
+        return view('home.InvestoresRequest', compact('investorInfo',));
     }
 
 }
