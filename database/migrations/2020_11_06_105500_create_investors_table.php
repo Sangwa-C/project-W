@@ -21,6 +21,8 @@ class CreateInvestorsTable extends Migration
             $table->string('sector');
             $table->string('support');
             $table->longText('spt_desc');
+            $table->integer('userId')->unsigned();
+            $table->foreign('userId')->references('id')->on('users');
             $table->timestamps();
         });
     }
