@@ -2,19 +2,13 @@
 @extends('layouts.dash')
 
 @section('dashboard')
-
     <div class="container">
-
-
         <div class="container-fluid">
 
             <!-- Page Heading -->
             <h1 class="h3 mb-2 text-gray-800">User who are Investors</h1>
-
-
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
-
                 <div class="card-he  ader py-3">
                     <h6 class="m-0 font-weight-bold">Users</h6>
                 </div>
@@ -32,12 +26,9 @@
                                     @if (Auth::user()->user_type =="SuperAdmin")
                                     <th> Action </th>
                                     @endif
-
                                 </tr>
                             </thead>
                             <tbody>
-
-
                                     @foreach ($userinfo as $user)
                                     @if ($user->user_type =="investor"  )
                                     <tr>

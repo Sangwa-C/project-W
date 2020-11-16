@@ -18,7 +18,6 @@ class DashboardController extends Controller
         // dd($userinfo); allUsers
         return view('profile',compact('userInfor'));
     }
-
     public function personCause()
     {
         return view('personCause');
