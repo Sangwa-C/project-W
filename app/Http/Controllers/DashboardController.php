@@ -84,8 +84,7 @@ class DashboardController extends Controller
     public function sector()
     {
         $sector = DB::table('sectors')->where('status','1')->get();
-        return view('personCause',compact('sector',));
-
+        return view('personCause',compact('sector'));
     }
     public function offerSupport(Request $request)
     {
@@ -94,11 +93,8 @@ class DashboardController extends Controller
             $offerSupport->sector =$request->get('sector');
             $offerSupport->support = $request->get('support');
             $offerSupport->spt_desc = $request->get('spt_desc');
-            // dd($offerSupport);
             $offerSupport->save();
-
             return view('home');
-
     }
 
     public function allUsers()

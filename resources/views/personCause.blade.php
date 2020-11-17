@@ -10,7 +10,6 @@
         #uploadTeamMembers {
             display: none;
         }
-
         #file-image {
             display: inline;
             margin: 0 auto .5rem auto;
@@ -205,7 +204,6 @@
                         </select>
                     </div>
                 </div>
-
                 <div class="form-group row">
                     <label for="spt_desc" class="col-sm-2 col-form-label">explain briefly the support your offering</label>
                     <div class="col-sm-10">
@@ -213,20 +211,13 @@
                             placeholder="ex:  i want to offer mentorship to startup businesses"></textarea>
                     </div>
                 </div>
-
                 <div class="modal-footer">
-
                     <button type="submit" class="btn btn-primary">Submit</button>
-
                 </div>
             </form>
 
         </div>
         @endif
-
-
-
-
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
