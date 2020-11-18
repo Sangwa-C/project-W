@@ -1,11 +1,7 @@
-
-
 @extends('layouts.dash')
-
 @section('dashboard')
 <div class="container">
     <div class="container-fluid">
-
         <!-- Page Heading -->
         <h1 class="h3 mb-2 text-gray-800">Enterprenuer who Request to Help</h1>
         <!-- DataTales Example -->

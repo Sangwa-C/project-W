@@ -1,34 +1,7 @@
-{{-- @extends('layouts.app')
-
-@section('content')
-<div class="container" style="margin-top:10%">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection --}}
-
 @extends('layouts.dash')
-
 @section('dashboard')
     <div class="container">
         <div class="container-fluid">
-
             <!-- Page Heading -->
             <h1 class="h3 mb-2 text-gray-800">Investers who Request to Help</h1>
             <!-- DataTales Example -->
@@ -48,13 +21,11 @@
                                     <th>Sector</th>
                                     <th>Support</th>
                                     <th>Discription</th>
-                                    <th> Action </th>
-
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                     @foreach ($userinfo as $user)
-
                                     <tr>
                                         <td>
                                             @foreach ($user['users'] as $usersKey=>$users)
@@ -80,7 +51,7 @@
                                                 <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLongTitle">Discription</h5>
+                                                      <h5 class="modal-title" id="exampleModalLongTitle">Discription</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
