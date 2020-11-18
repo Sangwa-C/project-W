@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,17 +24,29 @@ Route::get('/', function () {
 //     return view('profile'); registerIdea offerSupport
 // });
 
-Route::get('/profile','App\Http\Controllers\DashboardController@userinfo');
+Route::get('/profile', 'App\Http\Controllers\DashboardController@userinfo');
 
-Route::get('/allUsers','App\Http\Controllers\DashboardController@allUsers');
+Route::get('/allUsers', 'App\Http\Controllers\DashboardController@allUsers');
 
-Route::get('/personCause','App\Http\Controllers\DashboardController@sector');
+Route::get('/personCause', 'App\Http\Controllers\DashboardController@sector');
 
-Route::post('updateUser/{id}','App\Http\Controllers\DashboardController@updateUser');
+Route::post('updateUser/{id}', 'App\Http\Controllers\DashboardController@updateUser');
 
-Route::post('registerIdea','App\Http\Controllers\DashboardController@registerIdea');
+Route::post('registerIdea', 'App\Http\Controllers\DashboardController@registerIdea');
 
-Route::post('offerSupport','App\Http\Controllers\DashboardController@offerSupport');
+Route::post('offerSupport', 'App\Http\Controllers\DashboardController@offerSupport');
+
+Route::get('/Investors', 'App\Http\Controllers\DashboardController@Investors');
+Route::get('/Enterprenuer', 'App\Http\Controllers\DashboardController@Enterprenuer');
+Route::get('/InvestoresRequest', 'App\Http\Controllers\DashboardController@InvestoresRequest');
+
+// view()->composer(['*'], function($view) {
+
+
+//  $view->with(compact('ProvinceRegion'));});
+
+
+
 
 
 Auth::routes();

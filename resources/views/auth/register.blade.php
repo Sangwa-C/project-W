@@ -40,12 +40,12 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="Pnbr" class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
+                            <label for="Phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Pnbr" type="Pnbr" class="form-control @error('Phone_Number') is-invalid @enderror" name="Pnbr" value="{{ old('Pnbr') }}" required autocomplete="Pnbr" autofocus>
+                                <input id="Pnbr" type="tel" class="form-control @error('Pnbr') is-invalid @enderror" name="Pnbr" value="{{ old('Pnbr') }}" required autocomplete="Phone" autofocus>
 
-                                @error('Phone_Number')
+                                @error('Pnbr')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -53,7 +53,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="Pnbr" class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
+                            <label for="Pnbr" class="col-md-4 col-form-label text-md-right">{{ __('Category ') }}</label>
 
                             <div class="col-md-6">
                                 <select name="usertype" class="form-control">
@@ -62,7 +62,7 @@
                                     <option value="investor">Investor</option>
                                 </select>
 
-                                @error('Phone_Number')
+                                @error('usertype')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
