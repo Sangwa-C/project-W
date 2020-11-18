@@ -38,7 +38,6 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-<<<<<<< HEAD
 
 
                         {{-- <tr>
@@ -52,92 +51,61 @@
                         </tr> --}}
 
 
-                        @foreach ($investorInfo as $investor)
-                        {{-- @if ( Auth::user()->user_type =="investor") --}}
-                        <div class="card profile-card-5">
-                            <div class="card-body pt-0">
-{{--
-                                <div class="row">
-                                    <div class="col-sm-2">Name: </div>
-                                    <div class="col-sm-9">{{ $investor->name }}</div>
-                                </div> --}}
 
-                                <div class="row">
-                                    <div class="col-sm-2">Email: </div>
-                                    <div class="col-sm-9">{{ $investor->bns_email }}</div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-sm-2">Phone Number</div>
-                                    <div class="col-sm-9">{{ $investor->bns_phn_number }}</div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-sm-2">Address</div>
-                                    <div class="col-sm-9">{{ $investor->legal_status }} </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-sm-2"> Sector</div>
-                                    <div class="col-sm-9">{{ $investor->sector }}</div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-sm-2">Support</div>
-                                    <div class="col-sm-9">{{ $investor->support }}</div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-sm-2">Description</div>
-                                    <div class="col-sm-9">{{ $investor->spt_desc }}</div>
-                                </div>
-
-                                <h5 class="card-title" style="float:right">
-                                     @if (Auth::user()->user_type =="SuperAdmin")
-                                   <a href="changingstutas/{{ $investor->id }}">{{ $investor->user_type }}</a>
-                                    @endif</h5>
-
-
-                            </div>
-                        </div>
-                        {{-- @endif --}}
-
-                        @endforeach
-=======
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Phone Number</th>
-                                    <th>Address</th>
-                                    <th>UserType</th>
-                                    <th>Person To Contach</th>
-                                    @if (Auth::user()->user_type =="SuperAdmin")
+                                    <th>Investor-Email </th>
+                                    <th>Company</th>
+                                    <th>Stutas</th>
+                                    <th>Sector</th>
+                                    <th>Support</th>
+                                    <th>Discription</th>
+
                                     <th> Action </th>
-                                    @endif
+
                                 </tr>
                             </thead>
                             <tbody>
                                     @foreach ($userinfo as $user)
-                                    @if ($user->user_type =="investor"  )
+
                                     <tr>
-                                        <td>{{ $user->name }}</td>
-                                        <td>{{ $user->email }}</td>
-                                        <td>{{ $user->Pnbr }}</td>
-                                        <td>{{ $user->counrty }}/ <br> {{ $user->city}} </td>
-                                        <td>{{ $user->user_type }}</td>
-                                        <td>{{ $user->prs_name }}/ <br> {{ $user->prs_nbr }} </td>
-                                        @if (Auth::user()->user_type =="SuperAdmin")
-                                        <td> <a href="changingstutas/{{ $user->id }}">{{ $user->user_type }}</a> </td>
-                                        @endif
+                                        <td>{{ $user->bns_email }}</td>
+                                        <td>{{ $user->bns_phn_number }}</td>
+                                        <td>{{ $user->legal_status }}</td>
+                                        <td>{{ $user->sector }} </td>
+                                        <td>{{ $user->support }}</td>
+                                        <td>
+                                             <!-- Button trigger modal -->
+                                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#e{{ $user->id }}">
+                                                Discription
+                                            </button>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="e{{ $user->id }}" tabindex="-1" role="dialog" style="left:2px !important " aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">Discription</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        {{ $user->spt_desc }}
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td> <a href="changingstutas/{{ $user->userId }}">{{ $user->userId }}</a> </td>
                                     </tr>
-                                    @endif
                                     @endforeach
 
                             </tbody>
                         </table>
->>>>>>> 34a89958bcf10f279e3d330402ab26a713cc4aaf
                     </div>
                 </div>
 
