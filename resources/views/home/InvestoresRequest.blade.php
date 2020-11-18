@@ -30,7 +30,7 @@
         <div class="container-fluid">
 
             <!-- Page Heading -->
-            <h1 class="h3 mb-2 text-gray-800">User who are Investors</h1>
+            <h1 class="h3 mb-2 text-gray-800">Investers who Request to Help</h1>
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
                 <div class="card-he  ader py-3">
@@ -38,30 +38,16 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-
-
-                        {{-- <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>{{ $investor->counrty }}/ <br> {{ $investor->city}} </td>
-                            <td>{{ $investor->user_type }}</td>
-                            <td>{{ $investor->prs_name }}/ <br> {{ $uinvestorser->prs_nbr }} </td>
-
-                        </tr> --}}
-
-
-
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Investor-Email </th>
+                                    <th>name</th>
+                                    <th>Investor-Email</th>
                                     <th>Company</th>
                                     <th>Stutas</th>
                                     <th>Sector</th>
                                     <th>Support</th>
                                     <th>Discription</th>
-
                                     <th> Action </th>
 
                                 </tr>
@@ -70,10 +56,19 @@
                                     @foreach ($userinfo as $user)
 
                                     <tr>
+                                        <td>
+                                            @foreach ($user['users'] as $usersKey=>$users)
+                                                {{$users->name}}
+                                             @endforeach
+                                        </td>
                                         <td>{{ $user->bns_email }}</td>
                                         <td>{{ $user->bns_phn_number }}</td>
                                         <td>{{ $user->legal_status }}</td>
-                                        <td>{{ $user->sector }} </td>
+                                        <td>
+                                            @foreach ($user['sectors'] as $sectorsKey=>$sectors)
+                                                {{$sectors->sectorName}}
+                                             @endforeach
+                                        </td>
                                         <td>{{ $user->support }}</td>
                                         <td>
                                              <!-- Button trigger modal -->

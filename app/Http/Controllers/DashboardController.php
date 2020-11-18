@@ -77,10 +77,11 @@ class DashboardController extends Controller
         $offerSupport->support = $request->get('support');
         $offerSupport->spt_desc = $request->get('spt_desc');
         $offerSupport->bns_email = $request->get('bns_email');
+        $offerSupport->userId = Auth::user()->id;
         $offerSupport->bns_phn_number = $request->get('bns_phn_number');
-        // dd($offerSupport)
+        // dd($offerSupport)offerSupport
         $offerSupport->save();
-        return view('home');
+        return redirect()->back();
     }
     public function allUsers()
     {
@@ -101,18 +102,27 @@ class DashboardController extends Controller
     }
     public function InvestoresRequest()
     {
-         $userinfo = InvestoresRequest::all();
-
-         foreach ($userinfo as $key => $value) {
+         $userinfo = Investors::all();
+          foreach ($userinfo as $key => $value) {
              $userid=$value->userId;
-             dd( DB::table('users')->where('id',$userid) ->get());
-            //  $userinfo[$key]['users'] =
-             # code...
+             $sector=$value->sector;
+             $userinfo[$key]['users'] =DB::table('users')->where('id',$userid) ->get();
+             $userinfo[$key]['sectors'] =DB::table('sectors')->where('id', $sector) ->get();
          }
-
-
-
         return view('home.InvestoresRequest', compact('userinfo'));
+    }
+    public function EnterprenuerRequest()
+    {
+        $userinfo = registerBusiness::all();
+        foreach ($userinfo as $key => $value) {
+           $userid=$value->userId;
+           $sector=$value->sector;
+           $userinfo[$key]['users'] =DB::table('users')->where('id',$userid) ->get();
+           $userinfo[$key]['sectors'] =DB::table('sectors')->where('id',$sector)->get();
+       }
+// dd( $userinfo);
+      return view('home.EnterprenuerRequest', compact('userinfo'));
+
     }
 
 }
