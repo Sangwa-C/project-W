@@ -6,27 +6,25 @@
 
     {{-- About --}}
     <section>
-        <div class="container"  style="margin-top: 7%">
+        <div class="container" style="margin-top: 11%">
             <div class="row">
                 <div class="col-sm-5">
-                    <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">About US/ <br> Our Story </h2>
+                    <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">About US/ <br> Our Story
+                    </h2>
                 </div>
                 <div class="col-sm-6  text-justify" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000">
 
-                    <p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>We are an intermediate company that helps entrepreneurs to connect with investors, either helping
+                        with mentorship, trainings, and funding.
+
+                        According to what an entrepreneur project needs or investor wants, we categorize them and analyze
+                        deeply their targets before matching them.
+
+                    </p>
 
 
 
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci at eius similique repellendus
-                        non totam rem,
-                        quisquam, doloribus, est doloremque enim. Sunt modi vero in ipsa distinctio beatae quas
-                        repellat?</p>
+                    <p> After that, we offer comments, feedback, and stars/ rating to the best entrepreneur of the period.</p>
 
 
 
@@ -37,14 +35,15 @@
     </section>
     {{-- Services --}}
 
-    <section style="background-color: #e1f1f5">
+    <section style="background-color: #e1f1f5; margin-top: 10%;">
         <div class="container" style="margin-top: 7%; margin-left:5%;">
-            <h1 class="text-center" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom" style="margin-bottom: 5%; width:100%">Services</h1>
+            <h1 class="text-center" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom"
+                style="margin-bottom: 5%; padding-top:7%; width:100%">Services</h1>
             <div class="row">
 
                 <div class="col-md-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
 
-                    <div class="row" >
+                    <div class="row">
                         <div class="col-md-3">
                             <span class="fa-stack fa-4x "><i class="fa fa-check-circle"
                                     style="font-size:70px;color:rgb(104, 194, 216);text-shadow: 3px 5px 2px rgb(68, 94, 100), 3px 5px rgb(68, 94, 100);"></i></span>
@@ -162,7 +161,8 @@
 
     <section>
         <div class="container" style="margin-top: 7%;">
-            <h1 class="text-center" data-aos="fade-in" data-aos-duration="1500" data-aos-anchor-placement="top-bottom" style="margin-bottom: 5%; width:80%">Successful stories/ testmonials</h1>
+            <h1 class="text-center" data-aos="fade-in" data-aos-duration="1500" data-aos-anchor-placement="top-bottom"
+                style="margin-bottom: 5%; width:80%">Successful stories/ testmonials</h1>
             {{-- <div class="row">
                 <div class="col-md-4">
 
