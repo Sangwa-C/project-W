@@ -6,12 +6,12 @@
 
     {{-- About --}}
     <section>
-        <div class="container" style="margin-top: 7%">
+        <div class="container"  style="margin-top: 7%">
             <div class="row">
                 <div class="col-sm-5">
-                    <h2>About US/ <br> Our Story </h2>
+                    <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">About US/ <br> Our Story </h2>
                 </div>
-                <div class="col-sm-6  text-justify">
+                <div class="col-sm-6  text-justify" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000">
 
                     <p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
@@ -39,12 +39,12 @@
 
     <section style="background-color: #e1f1f5">
         <div class="container" style="margin-top: 7%; margin-left:5%;">
-            <h1 class="text-center" style="margin-bottom: 5%; width:100%">Services</h1>
+            <h1 class="text-center" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom" style="margin-bottom: 5%; width:100%">Services</h1>
             <div class="row">
 
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
 
-                    <div class="row">
+                    <div class="row" >
                         <div class="col-md-3">
                             <span class="fa-stack fa-4x "><i class="fa fa-check-circle"
                                     style="font-size:70px;color:rgb(104, 194, 216);text-shadow: 3px 5px 2px rgb(68, 94, 100), 3px 5px rgb(68, 94, 100);"></i></span>
@@ -59,7 +59,7 @@
 
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     <div class="row">
                         <div class="col-md-3">
                             <span class="fa-stack fa-4x"><i class="fa fa-superpowers"
@@ -78,7 +78,7 @@
 
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
 
                     <div class="row">
                         <div class="col-md-3">
@@ -99,7 +99,7 @@
                 </div>
 
 
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     <div class="row">
                         <div class="col-md-3">
                             <span class="fa-stack fa-4x"><i class="fa fa-hand-rock-o"
@@ -117,7 +117,7 @@
 
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     <div class="row">
                         <div class="col-md-3"> <span class="fa-stack fa-4x"><i class="fa fa-plug"
                                     style="font-size:70px;color:rgb(104, 194, 216);text-shadow: 3px 5px 2px rgb(68, 94, 100), 3px 5px rgb(68, 94, 100);"></i></span><br><br>
@@ -136,7 +136,7 @@
 
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     <div class="row">
                         <div class="col-md-3"> <span class="fa-stack fa-4x"><i class="fa fa-line-chart"
                                     style="font-size:70px;color:rgb(104, 194, 216);text-shadow: 3px 5px 2px rgb(68, 94, 100), 3px 5px rgb(68, 94, 100);"></i></span><br><br>
@@ -162,7 +162,7 @@
 
     <section>
         <div class="container" style="margin-top: 7%;">
-            <h1 class="text-center" style="margin-bottom: 5%; width:80%">Successful stories/ testmonials</h1>
+            <h1 class="text-center" data-aos="fade-in" data-aos-duration="1500" data-aos-anchor-placement="top-bottom" style="margin-bottom: 5%; width:80%">Successful stories/ testmonials</h1>
             {{-- <div class="row">
                 <div class="col-md-4">
 
