@@ -27,7 +27,10 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="assets\js\script.js"></script>
 
@@ -35,6 +38,19 @@
 
 </head>
 
+<style>
+    .button1 {
+        background-color: black;
+        opacity: 0.8;
+        border: 2px solid #4CAF50;
+    }
+
+    .button1:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+</style>
 
 <body>
 
@@ -76,6 +92,11 @@
     </nav>
     <!-- Navbar -->
 
+    <script>
+        AOS.init();
+
+    </script>
+
     <script type="text/javascript">
         $(document).ready(function() {
             $(window).scroll(function() {
@@ -107,31 +128,40 @@
             <!--First slide-->
             <div class="carousel-item active">
                 <div class="view"
-                    style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg'); background-repeat: no-repeat; background-size: cover;">
+                    style="background-image: url('../assets/img/firstSlide.jpg'); background-repeat: no-repeat; background-size: cover;">
 
                     <!-- Mask & flexbox options-->
-                    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+                    <div class="mask rgba-black-light d-flex">
 
                         <!-- Content -->
-                        <div class="text-center white-text mx-5 wow fadeIn" style="margin-top: 20%">
-                            <h1 class="mb-4">
-                                <strong>Learn Bootstrap 4 with MDB</strong>
-                            </h1>
+                        <div class="text-center text-light mx-5 wow" data-aos="fade-up-right" data-aos-duration="3000"
+                            style="margin-top: 15%; margin-left:2%">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h1 class="mb-4">
+                                        <strong class="text-light">Investor And Entrepreneur Connector</strong>
+                                    </h1>
 
-                            <p>
-                                <strong>Best & free guide of responsive web design</strong>
-                            </p>
+                                    <p>
+                                        <strong>Helping entrepreneurs, investors and lenders make better decisions about
+                                            businesses they care about</strong>
+                                    </p>
 
-                            <p class="mb-4 d-none d-md-block">
-                                <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000
-                                    users. Video and written versions
-                                    available. Create your own, stunning website.</strong>
-                            </p>
+                                    <p class="mb-4 d-none d-md-block">
+                                        <strong></strong>
+                                    </p>
 
-                            <a target="_blank" href="https://mdbootstrap.com/bootstrap-tutorial/"
-                                class="btn btn-outline-white btn-lg">Start free tutorial
-                                <i class="fa fa-graduation-cap ml-2"></i>
-                            </a>
+                                    <button class="button button1">
+                                        <a target="_blank" href="https://mdbootstrap.com/bootstrap-tutorial/"
+                                            class="btn btn-outline-white btn-lg text-light">Get Started
+                                            <i class="fa fa-fast-forward ml-2"></i>
+                                        </a>
+                                    </button>
+
+                                </div>
+                            </div>
+
+
                         </div>
                         <!-- Content -->
 
@@ -144,33 +174,41 @@
 
             <!--Second slide-->
             <div class="carousel-item">
-                <div class="view"
-                    style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/47.jpg'); background-repeat: no-repeat; background-size: cover;">
+                <div class="view" style="background-image: url('../assets/img/secondSlide.jpg'); background-repeat: no-repeat; background-size: cover;">
 
                     <!-- Mask & flexbox options-->
-                    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+                    <div class="mask rgba-black-light d-flex justify-content-end">
 
                         <!-- Content -->
-                        <div class="text-center white-text mx-5 wow fadeIn" style="margin-top: 20%">
-                            <h1 class="mb-4">
-                                <strong>Learn Bootstrap 4 with MDB</strong>
-                            </h1>
+                        <div class="text-center text-light mx-5 wow" data-aos="fade-up-right" data-aos-duration="6000"
+                        style="margin-top:15%; margin-right:20%">
+                        {{-- <div class="row">
+                            <div class="col-md-7"> --}}
+                                <h1 class="mb-4">
+                                    <strong class="text-light">Investor And <br> Entrepreneur Connector</strong>
+                                </h1>
 
-                            <p>
-                                <strong>Best & free guide of responsive web design</strong>
-                            </p>
+                                <p>
+                                    <strong>Helping entrepreneurs, investors and lenders make <br> better decisions about
+                                        businesses they care about</strong>
+                                </p>
 
-                            <p class="mb-4 d-none d-md-block">
-                                <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000
-                                    users. Video and written versions
-                                    available. Create your own, stunning website.</strong>
-                            </p>
+                                <p class="mb-4 d-none d-md-block">
+                                    <strong></strong>
+                                </p>
 
-                            <a target="_blank" href="https://mdbootstrap.com/bootstrap-tutorial/"
-                                class="btn btn-outline-white btn-lg">Start free tutorial
-                                <i class="fa fa-graduation-cap ml-2"></i>
-                            </a>
-                        </div>
+                                <button class="button button1">
+                                    <a target="_blank" href="https://mdbootstrap.com/bootstrap-tutorial/"
+                                        class="btn btn-outline-white btn-lg text-light">Get Started
+                                        <i class="fa fa-fast-forward ml-2"></i>
+                                    </a>
+                                </button>
+
+                            {{-- </div>
+                        </div> --}}
+
+
+                    </div>
                         <!-- Content -->
 
                     </div>
@@ -183,32 +221,38 @@
             <!--Third slide-->
             <div class="carousel-item">
                 <div class="view"
-                    style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/79.jpg'); background-repeat: no-repeat; background-size: cover;">
+                    style="background-image: url('../assets/img/thirdSlide.JPG'); background-repeat: no-repeat; background-size: cover;">
 
                     <!-- Mask & flexbox options-->
                     <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
 
                         <!-- Content -->
-                        <div class="text-center white-text mx-5 wow fadeIn" style="margin-top: 20%">
-                            <h1 class="mb-4">
-                                <strong>Learn Bootstrap 4 with MDB</strong>
-                            </h1>
+                        <div class="text-center text-light mx-5 wow" data-aos="fade-up-right" data-aos-duration="6000"
+                        style="margin-top:15%; ">
+                        {{-- <div class="row">
+                            <div class="col-md-7"> --}}
+                                <h1 class="mb-4">
+                                    <strong class="text-light">Investor And <br> Entrepreneur Connector</strong>
+                                </h1>
 
-                            <p>
-                                <strong>Best & free guide of responsive web design</strong>
-                            </p>
+                                <p>
+                                    <strong>Helping entrepreneurs, investors and lenders make <br> better decisions about
+                                        businesses they care about</strong>
+                                </p>
 
-                            <p class="mb-4 d-none d-md-block">
-                                <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000
-                                    users. Video and written versions
-                                    available. Create your own, stunning website.</strong>
-                            </p>
+                                <p class="mb-4 d-none d-md-block">
+                                    <strong></strong>
+                                </p>
 
-                            <a target="_blank" href="https://mdbootstrap.com/bootstrap-tutorial/"
-                                class="btn btn-outline-white btn-lg">Start free tutorial
-                                <i class="fa fa-graduation-cap ml-2"></i>
-                            </a>
-                        </div>
+                                <button class="button button1">
+                                    <a target="_blank" href="https://mdbootstrap.com/bootstrap-tutorial/"
+                                        class="btn btn-outline-white btn-lg text-light">Get Started
+                                        <i class="fa fa-fast-forward ml-2"></i>
+                                    </a>
+                                </button>
+
+                            {{-- </div>
+                        </div> --}}
                         <!-- Content -->
 
                     </div>
