@@ -47,6 +47,10 @@ Route::get('/EnterprenuerRequest', 'App\Http\Controllers\DashboardController@Ent
 //  $view->with(compact('ProvinceRegion'));});
 
 
+// app routes
+
+Route::get('/contact', 'App\Http\Controllers\AppController@contact');
+
 
 
 
