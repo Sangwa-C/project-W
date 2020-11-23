@@ -23,7 +23,7 @@
 </div>
 @endsection --}}
 
-@extends('layouts.app')
+@extends('layouts.all')
 
 @section('content')
     <style>
@@ -50,7 +50,7 @@
 
                     <!--Grid column-->
                     <div class="col-md-9 mb-md-0 mb-5">
-                        <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                        <form id="contact-form" name="contact-form" action="" method="POST">
 
                             <!--Grid row-->
                             <div class="row">
@@ -123,15 +123,15 @@
                 <div class="col-md-5 text-center" style="margin-top:70px ">
                     <ul class="list-unstyled mb-0" >
                         <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                            <p>San Francisco, CA 94126, USA</p>
+                            <p>KN 8 Ave, Kigali</p>
                         </li>
 
                         <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                            <p>+ 01 234 567 89</p>
+                            <p>+250788522501</p>
                         </li>
 
                         <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                            <p>contact@mdbootstrap.com</p>
+                            <p>yanjye.com@gmail.com</p>
                         </li>
                     </ul>
                 </div>

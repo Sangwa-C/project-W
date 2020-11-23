@@ -378,13 +378,13 @@
                                 <a href="" class="text-light">Kacyiru</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-light">oppostite zigama</a>
+                                <a href="#!" class="text-light">Oppostite zigama</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-light">whatsapp:0788377874</a>
+                                <a href="#!" class="text-light">Whatsapp:0788377874</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-light">email:yanjye.com@gmail.com</a>
+                                <a href="#!" class="text-light">Email:yanjye.com@gmail.com</a>
                             </li>
                         </ul>
 
