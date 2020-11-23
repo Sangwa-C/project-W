@@ -9,7 +9,7 @@
         <div class="container" style="margin-top: 11%">
             <div class="row">
                 <div class="col-sm-5">
-                    <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">About US/ <br> Our Story
+                    <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Our Story
                     </h2>
                 </div>
                 <div class="col-sm-6  text-justify" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000">
@@ -24,9 +24,8 @@
 
 
 
-                    <p> After that, we offer comments, feedback, and stars/ rating to the best entrepreneur of the period.</p>
-
-
+                    <p> After that, we offer comments, feedback, and stars/ rating to the best entrepreneur of the period.
+                    </p>
 
                 </div>
 
@@ -45,13 +44,15 @@
 
                     <div class="row">
                         <div class="col-md-3">
-                            <span class="fa-stack fa-4x "><i class="fa fa-check-circle"
-                                    style="font-size:70px;color:rgb(104, 194, 216);text-shadow: 3px 5px 2px rgb(68, 94, 100), 3px 5px rgb(68, 94, 100);"></i></span>
+                            <img src="assets/img/download.svg" alt=""
+                                style="width:70px; font-size:70px; color:rgb(104, 194, 216);text-shadow: 3px 5px 2px rgb(68, 94, 100), 3px 5px rgb(68, 94, 100);">
                         </div>
                         <div class="col-md-9">
-                            <h4 class="my-3">Lorem ipsum 1</h4>
-                            <p class="text-muted" style="width: 85%">Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                nullam nunc justo sagittis suscipit ultrices.</p> <br><br>
+                            <h4 class="my-3">Mentorship</h4>
+                            <p class="text-muted" style="width: 85%">
+                                Our mentors are experienced business
+                                who understand the importance of mentoring a new generation of entrepreneurs.</p>
+                            <br><br>
                         </div>
                     </div>
 
@@ -61,13 +62,14 @@
                 <div class="col-md-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     <div class="row">
                         <div class="col-md-3">
-                            <span class="fa-stack fa-4x"><i class="fa fa-superpowers"
-                                    style="font-size:70px;color:rgb(104, 194, 216);text-shadow: 3px 5px 2px rgb(68, 94, 100), 3px 5px rgb(68, 94, 100);"></i></span>
+                            <img src="assets\img\funding.svg" alt=""
+                                style="width:70px; font-size:70px; color:rgb(104, 194, 216);text-shadow: 3px 5px 2px rgb(68, 94, 100), 3px 5px rgb(68, 94, 100);">
                         </div>
                         <div class="col-md-9">
-                            <h4 class="my-3">Lorem ipsum 2</h4>
-                            <p class="text-muted" style="width: 85%">Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                nullam nunc justo sagittis suscipit ultrices.</p>
+                            <h4 class="my-3">Funding</h4>
+                            <p class="text-muted" style="width: 85%">
+                                If you’re desperate to launch your own business but just don’t have the available funds,
+                                help is at hand.</p>
                         </div>
                     </div>
 
@@ -81,13 +83,16 @@
 
                     <div class="row">
                         <div class="col-md-3">
-                            <span class="fa-stack fa-4x"><i class="fa fa-bullseye"
-                                    style="font-size:70px;color:rgb(104, 194, 216);text-shadow: 3px 5px 2px rgb(68, 94, 100), 3px 5px rgb(68, 94, 100);"></i></span>
+                            <img src="assets\img\advice.svg" alt=""
+                                style="width:70px; font-size:70px; color:rgb(104, 194, 216);text-shadow: 3px 5px 2px rgb(68, 94, 100), 3px 5px rgb(68, 94, 100);">
+
                         </div>
                         <div class="col-md-9">
-                            <h4 class="my-3">Lorem ipsum 3</h4>
-                            <p class="text-muted" style="width: 85%">Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                nullam nunc justo sagittis suscipit ultrices.
+                            <h4 class="my-3">Advice</h4>
+                            <p class="text-muted" style="width: 85%">
+                                We advice underserved entrepreneurs to start, grow and sustain their
+                                businesses.
+
 
                             </p>
                         </div>
@@ -101,13 +106,14 @@
                 <div class="col-md-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     <div class="row">
                         <div class="col-md-3">
-                            <span class="fa-stack fa-4x"><i class="fa fa-hand-rock-o"
-                                    style="font-size:70px;color:rgb(104, 194, 216);text-shadow: 3px 5px 2px rgb(68, 94, 100), 3px 5px rgb(68, 94, 100);"></i></span><br><br>
+                            <img src="assets\img\training.svg" alt="" style="width: 70px">
                         </div>
                         <div class="col-md-9">
-                            <h4 class="my-3">Lorem ipsum 4</h4>
-                            <p class="text-muted" style="width: 85%">Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                nullam nunc justo sagittis suscipit ultrices.
+                            <h4 class="my-3">Training</h4>
+                            <p class="text-muted" style="width: 85%">
+                                We train young entrepreneurs enabling them to create jobs, build communities and transform
+                                lives.
+
 
                             </p>
                         </div>
@@ -118,14 +124,14 @@
 
                 <div class="col-md-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     <div class="row">
-                        <div class="col-md-3"> <span class="fa-stack fa-4x"><i class="fa fa-plug"
-                                    style="font-size:70px;color:rgb(104, 194, 216);text-shadow: 3px 5px 2px rgb(68, 94, 100), 3px 5px rgb(68, 94, 100);"></i></span><br><br>
+                        <div class="col-md-3">
+                            <img src="assets\img\meeting.svg" alt="" style="width: 70px">
                         </div>
                         <div class="col-md-9">
-                            <h4 class="my-3">Lorem ipsum 5</h4>
-                            <p class="text-muted" style="width: 85%">Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                nullam nunc justo sagittis suscipit ultrices.
-
+                            <h4 class="my-3">Meeting</h4>
+                            <p class="text-muted" style="width: 85%">
+                                we help entrepreneurs to find investment opportunities. As for investor we heilp them to
+                                invest in sector of their chosing.
                             </p>
                         </div>
                     </div>
@@ -137,14 +143,15 @@
 
                 <div class="col-md-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     <div class="row">
-                        <div class="col-md-3"> <span class="fa-stack fa-4x"><i class="fa fa-line-chart"
-                                    style="font-size:70px;color:rgb(104, 194, 216);text-shadow: 3px 5px 2px rgb(68, 94, 100), 3px 5px rgb(68, 94, 100);"></i></span><br><br>
+                        <div class="col-md-3">
+                            <img src="assets\img\leasing.webp" alt="" style="width: 70px">
+
                         </div>
                         <div class="col-md-9">
-                            <h4 class="my-3">Lorem ipsum 6</h4>
-                            <p class="text-muted" style="width: 85%">Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                nullam nunc justo sagittis suscipit ultrices.
-
+                            <h4 class="my-3">Leasing</h4>
+                            <p class="text-muted" style="width: 85%">
+                                we offer leasing aggrements, to young enterpreneurs who are ready to implement their
+                                profitable life changing solutioms
                             </p>
                         </div>
                     </div>
@@ -162,7 +169,7 @@
     <section>
         <div class="container" style="margin-top: 7%;">
             <h1 class="text-center" data-aos="fade-in" data-aos-duration="1500" data-aos-anchor-placement="top-bottom"
-                style="margin-bottom: 5%; width:80%">Successful stories/ testmonials</h1>
+                style="margin-bottom: 5%; width:90%">Successful stories</h1>
             {{-- <div class="row">
                 <div class="col-md-4">
 
