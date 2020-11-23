@@ -50,13 +50,22 @@
         color: white;
     }
 
+    .dropdown:hover>.dropdown-menu {
+        display: block;
+    }
+
+    .dropdown>.dropdown-toggle:active {
+        /*Without this, clicking will make it sticky*/
+        pointer-events: none;
+    }
+
 </style>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg  scrolling-navbar">
-        <div class="container">
+    <nav class="navbar fixed-top navbar-expand-lg  scrolling-navbar" >
+        <div class="container" style="margin-left:10%; margin-right:10%">
             <a class="navbar-brand" href="#">
                 <img src="http://placehold.it/150x50?text=Logo" alt="">
             </a>
@@ -73,18 +82,41 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Succefful Stories</a>
+                        <a class="nav-link text-light" href="#">About Us</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="/login">log-In</a>
+                        <a class="nav-link text-light" href="#"></a>
+                    </li>
+
+                    <li>
+                        <div class="dropdown">
+                            <a class="nav-link text-light dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                How It works
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Investor</a>
+                                <a class="dropdown-item" href="#">Entrepreneur</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="dropdown">
+                            <a class="nav-link text-light dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Join Us
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item nav-link" href="/login">login</a>
+                                <a class="dropdown-item nav-link" href="/register">Register</a>
+                            </div>
+                        </div>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="/register">Sign-Up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Contact</a>
+                        <a class="nav-link text-light" href="#">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -174,41 +206,44 @@
 
             <!--Second slide-->
             <div class="carousel-item">
-                <div class="view" style="background-image: url('../assets/img/secondSlide.jpg'); background-repeat: no-repeat; background-size: cover;">
+                <div class="view"
+                    style="background-image: url('../assets/img/secondSlide.jpg'); background-repeat: no-repeat; background-size: cover;">
 
                     <!-- Mask & flexbox options-->
                     <div class="mask rgba-black-light d-flex justify-content-end">
 
                         <!-- Content -->
                         <div class="text-center text-light mx-5 wow" data-aos="fade-up-right" data-aos-duration="6000"
-                        style="margin-top:15%; margin-right:20%">
-                        {{-- <div class="row">
-                            <div class="col-md-7"> --}}
-                                <h1 class="mb-4">
-                                    <strong class="text-light">Investor And <br> Entrepreneur Connector</strong>
-                                </h1>
+                            style="margin-top:15%; margin-right:20%">
+                            {{-- <div class="row">
+                                <div class="col-md-7"> --}}
+                                    <h1 class="mb-4">
+                                        <strong class="text-light">Investor And <br> Entrepreneur Connector</strong>
+                                    </h1>
 
-                                <p>
-                                    <strong>Helping entrepreneurs, investors and lenders make <br> better decisions about
-                                        businesses they care about</strong>
-                                </p>
+                                    <p>
+                                        <strong>Helping entrepreneurs, investors and lenders make <br> better decisions
+                                            about
+                                            businesses they care about</strong>
+                                    </p>
 
-                                <p class="mb-4 d-none d-md-block">
-                                    <strong></strong>
-                                </p>
+                                    <p class="mb-4 d-none d-md-block">
+                                        <strong></strong>
+                                    </p>
 
-                                <button class="button button1">
-                                    <a target="_blank" href="https://mdbootstrap.com/bootstrap-tutorial/"
-                                        class="btn btn-outline-white btn-lg text-light">Get Started
-                                        <i class="fa fa-fast-forward ml-2"></i>
-                                    </a>
-                                </button>
+                                    <button class="button button1">
+                                        <a target="_blank" href="https://mdbootstrap.com/bootstrap-tutorial/"
+                                            class="btn btn-outline-white btn-lg text-light">Get Started
+                                            <i class="fa fa-fast-forward ml-2"></i>
+                                        </a>
+                                    </button>
 
-                            {{-- </div>
-                        </div> --}}
+                                    {{--
+                                </div>
+                            </div> --}}
 
 
-                    </div>
+                        </div>
                         <!-- Content -->
 
                     </div>
@@ -228,63 +263,65 @@
 
                         <!-- Content -->
                         <div class="text-center text-light mx-5 wow" data-aos="fade-up-right" data-aos-duration="6000"
-                        style="margin-top:15%; ">
-                        {{-- <div class="row">
-                            <div class="col-md-7"> --}}
-                                <h1 class="mb-4">
-                                    <strong class="text-light">Investor And <br> Entrepreneur Connector</strong>
-                                </h1>
+                            style="margin-top:15%; ">
+                            {{-- <div class="row">
+                                <div class="col-md-7"> --}}
+                                    <h1 class="mb-4">
+                                        <strong class="text-light">Investor And <br> Entrepreneur Connector</strong>
+                                    </h1>
 
-                                <p>
-                                    <strong>Helping entrepreneurs, investors and lenders make <br> better decisions about
-                                        businesses they care about</strong>
-                                </p>
+                                    <p>
+                                        <strong>Helping entrepreneurs, investors and lenders make <br> better decisions
+                                            about
+                                            businesses they care about</strong>
+                                    </p>
 
-                                <p class="mb-4 d-none d-md-block">
-                                    <strong></strong>
-                                </p>
+                                    <p class="mb-4 d-none d-md-block">
+                                        <strong></strong>
+                                    </p>
 
-                                <button class="button button1">
-                                    <a target="_blank" href="https://mdbootstrap.com/bootstrap-tutorial/"
-                                        class="btn btn-outline-white btn-lg text-light">Get Started
-                                        <i class="fa fa-fast-forward ml-2"></i>
-                                    </a>
-                                </button>
+                                    <button class="button button1">
+                                        <a target="_blank" href="https://mdbootstrap.com/bootstrap-tutorial/"
+                                            class="btn btn-outline-white btn-lg text-light">Get Started
+                                            <i class="fa fa-fast-forward ml-2"></i>
+                                        </a>
+                                    </button>
 
-                            {{-- </div>
-                        </div> --}}
-                        <!-- Content -->
+                                    {{--
+                                </div>
+                            </div> --}}
+                            <!-- Content -->
+
+                        </div>
+                        <!-- Mask & flexbox options-->
 
                     </div>
-                    <!-- Mask & flexbox options-->
-
                 </div>
+                <!--/Third slide-->
+
             </div>
-            <!--/Third slide-->
+            <!--/.Slides-->
+
+            <!--Controls-->
+            <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            <!--/.Controls-->
 
         </div>
-        <!--/.Slides-->
-
-        <!--Controls-->
-        <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-        <!--/.Controls-->
-
-    </div>
-    <!--/.Carousel Wrapper-->
+        <!--/.Carousel Wrapper-->
 
 
 
 
-    <main>
-        @yield('content')
-    </main>
+        <main>
+            @yield('content')
+        </main>
 
 
 
