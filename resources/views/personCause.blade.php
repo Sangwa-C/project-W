@@ -36,14 +36,14 @@
                 <div class="form-group row">
                     <label for="pjt_name" class="col-sm-2 col-form-label">Project Name</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="pjt_name" id="pjt_name"
+                        <input type="text" class="form-control" required name="pjt_name" id="pjt_name"
                             placeholder="Your Project Name">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="pjt_desc" class="col-sm-2 col-form-label">Which sector are you in</label>
                     <div class="col-sm-10">
-                        <select class="custom-select my-1 mr-sm-2" name="sector" id="sector">
+                        <select class="custom-select my-1 mr-sm-2" required name="sector" id="sector">
                             <option selected disabled>Choose...</option>
                             @foreach ($sector as $business)
                                 <option value="{{ $business->id }}">{{ $business->sectorName }}</option>
@@ -55,7 +55,7 @@
                 <div class="form-group row">
                     <label for="pjt_desc" class="col-sm-2 col-form-label">Description</label>
                     <div class="col-sm-10">
-                        <textarea type="text" class="form-control" name="pjt_desc" id="pjt_desc"
+                        <textarea type="text" class="form-control" required name="pjt_desc" id="pjt_desc"
                             placeholder="Describe your project"></textarea>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                 <div class="form-group row" id="registration">
                     <label for="registration" class="col-sm-2 col-form-label">Is your project registered in RDB</label>
                     <div class="col-sm-10">
-                        <select class="custom-select my-1 mr-sm-2" id="areYourRegistred" name="areYourRegistred"
+                        <select class="custom-select my-1 mr-sm-2" required id="areYourRegistred" name="areYourRegistred"
                             onchange="getSelectValue()">
                             <option selected>Choose...</option>
                             <option value="yes" id="yes">Yes</option>
@@ -98,7 +98,7 @@
                 <div class="form-group row">
                     <label for="support" class="col-sm-2 col-form-label">type of support you need</label>
                     <div class="col-sm-10">
-                        <select class="custom-select my-1 mr-sm-2" name="support">
+                        <select class="custom-select my-1 mr-sm-2" required name="support">
                             <option selected disabled>Choose...</option>
                             <option value="mentorship" id="mentorship">mentorship</option>
                             <option value="money" id="money">Investment (money)</option>
@@ -112,7 +112,7 @@
 
                     <label for="pjt_desc" class="col-sm-2 col-form-label">do you have a team</label>
                     <div class="col-sm-10">
-                        <select class="custom-select my-1 mr-sm-2" name="havingATeam" id="havingATeam" onchange="team()">
+                        <select class="custom-select my-1 mr-sm-2" required name="havingATeam" id="havingATeam" onchange="team()">
                             <option selected>Choose...</option>
                             <option value="iDo" id="iDo">Yes</option>
                             <option value="iDoNot" id="iDoNot">No</option>
@@ -132,7 +132,7 @@
                     <div class="form-group row">
                         <label for="pjt_name" class="col-sm-2 col-form-label">Postion</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="position" id="position"
+                            <input type="text" class="form-control"  name="position" id="position"
                                 placeholder="ex: I'm the CEO">
                         </div>
                     </div>
@@ -159,7 +159,7 @@
                 <div class="form-group row">
                     <label for="email" class="col-sm-2 col-form-label">Business email</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" required name="bns_email" id="bns_email"
+                        <input type="text" class="form-control" required required name="bns_email" id="bns_email"
                             placeholder="userEmail@email.com">
                     </div>
                 </div>
@@ -207,7 +207,7 @@
                 <div class="form-group row">
                     <label for="spt_desc" class="col-sm-2 col-form-label">explain briefly the support your offering</label>
                     <div class="col-sm-10">
-                        <textarea type="text" class="form-control" name="spt_desc" id="spt_desc"
+                        <textarea type="text" required class="form-control" name="spt_desc" id="spt_desc"
                             placeholder="ex:  i want to offer mentorship to startup businesses"></textarea>
                     </div>
                 </div>
