@@ -83,7 +83,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg  scrolling-navbar">
+    <nav class="navbar fixed-top navbar-expand-lg  scrolling-navbar" style="background-color: black">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="http://placehold.it/150x50?text=Logo" alt="">
@@ -95,7 +95,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link text-light" href="#">Home
+                        <a class="nav-link text-light" href="/">Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
@@ -112,7 +112,7 @@
                         <a class="nav-link text-light" href="/register">Sign-Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Contact</a>
+                        <a class="nav-link text-light" href="/contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -120,7 +120,7 @@
     </nav>
     <!-- Navbar -->
 
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         $(document).ready(function() {
             $(window).scroll(function() {
                 var scroll = $(window).scrollTop();
@@ -132,7 +132,7 @@
             })
         })
 
-    </script>
+    </script> --}}
 
 
 
@@ -143,7 +143,88 @@
     </main>
 
 
+    <footer class="page-footer font-small pt-4 text-light" style="background-color:#386570">
 
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+
+                    <!-- Content -->
+                    <h5 class="text-uppercase">Footer Content</h5>
+                    <p>Here you can use rows and columns to organize your footer content.</p>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none pb-3">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="text-light">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 4</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="text-light">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 4</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3" style="background-color:black; opacity: 0.3">© 2020 Copyright:
+            Project W
+
+        </div>
+        <!-- Copyright -->
+
+    </footer>
 
 </body>
 
