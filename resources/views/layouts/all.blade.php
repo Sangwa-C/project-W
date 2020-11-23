@@ -66,7 +66,7 @@
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg  scrolling-navbar" >
         <div class="container" style="margin-left:10%; margin-right:10%">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="{{ url('assets/img/save.png') }}" alt="" width="87px ">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -184,7 +184,7 @@
                                     </p>
 
                                     <button class="button button1">
-                                        <a target="_blank" href="https://mdbootstrap.com/bootstrap-tutorial/"
+                                        <a target="_blank" href="/login"
                                             class="btn btn-outline-white btn-lg text-light">Get Started
                                             <i class="fa fa-fast-forward ml-2"></i>
                                         </a>
@@ -232,7 +232,7 @@
                                     </p>
 
                                     <button class="button button1">
-                                        <a target="_blank" href="https://mdbootstrap.com/bootstrap-tutorial/"
+                                        <a target="_blank" href="/login"
                                             class="btn btn-outline-white btn-lg text-light">Get Started
                                             <i class="fa fa-fast-forward ml-2"></i>
                                         </a>
@@ -281,7 +281,7 @@
                                     </p>
 
                                     <button class="button button1">
-                                        <a target="_blank" href="https://mdbootstrap.com/bootstrap-tutorial/"
+                                        <a target="_blank" href="/login"
                                             class="btn btn-outline-white btn-lg text-light">Get Started
                                             <i class="fa fa-fast-forward ml-2"></i>
                                         </a>
@@ -336,7 +336,7 @@
 
                         <!-- Content -->
                         <h5 class="text-uppercase">Footer Content</h5>
-                        <p>Here you can use rows and columns to organize your footer content.</p>
+                        <p>This project will help every body in the world </p>
 
                     </div>
                     <!-- Grid column -->
@@ -347,21 +347,21 @@
                     <div class="col-md-3 mb-md-0 mb-3">
 
                         <!-- Links -->
-                        <h5 class="text-uppercase">Links</h5>
+                        <h5 class="text-uppercase">Partaners</h5>
 
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#!" class="text-light">Link 1</a>
+                                <a href="https://www.yanjye.com/" class="text-light">Yanjye limited</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-light">Link 2</a>
+                                <a href="https://www.envisageincubators.com/" class="text-light">Envisage Incubators</a>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <a href="#!" class="text-light">Link 3</a>
                             </li>
                             <li>
                                 <a href="#!" class="text-light">Link 4</a>
-                            </li>
+                            </li> --}}
                         </ul>
 
                     </div>
@@ -371,20 +371,20 @@
                     <div class="col-md-3 mb-md-0 mb-3">
 
                         <!-- Links -->
-                        <h5 class="text-uppercase">Links</h5>
+                        <h5 class="text-uppercase">ADDRESS</h5>
 
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#!" class="text-light">Link 1</a>
+                                <a href="" class="text-light">Kacyiru</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-light">Link 2</a>
+                                <a href="#!" class="text-light">oppostite zigama</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-light">Link 3</a>
+                                <a href="#!" class="text-light">whatsapp:0788377874</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-light">Link 4</a>
+                                <a href="#!" class="text-light">email:yanjye.com@gmail.com</a>
                             </li>
                         </ul>
 
@@ -399,7 +399,7 @@
 
             <!-- Copyright -->
             <div class="footer-copyright text-center py-3" style="background-color:black; opacity: 0.3">© 2020 Copyright:
-                Project W
+                connect plus
 
             </div>
             <!-- Copyright -->
