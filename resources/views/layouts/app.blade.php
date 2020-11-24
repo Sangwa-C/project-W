@@ -87,7 +87,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">About Us</a>
+                        <a class="nav-link text-dark" href="/about">About Us</a>
                     </li>
 
                     <li class="nav-item">

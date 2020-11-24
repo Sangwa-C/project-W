@@ -51,6 +51,7 @@ Route::get('/EnterprenuerRequest', 'App\Http\Controllers\DashboardController@Ent
 
 Route::get('/contact', 'App\Http\Controllers\AppController@contact');
 
+Route::get('/about', 'App\Http\Controllers\AppController@about');
 
 
 
