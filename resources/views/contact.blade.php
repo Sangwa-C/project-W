@@ -23,7 +23,7 @@
 </div>
 @endsection --}}
 
-@extends('layouts.all')
+@extends('layouts.app')
 
 @section('content')
     <style>
@@ -33,18 +33,22 @@
             background-repeat: no-repeat;
         }
 
+        .form-control {
+            border: none;
+            border-bottom: 1px solid black;
+            border-radius: 0%;
+        }
+
     </style>
 
-    <div style="margin-top: 6%; margin-left:5%;">
+    <div style="margin-top: 13%; margin-left:5%; margin-bottom:5%">
         <div class="row">
-            <div class="col-sm-5" style="margin-right:5%">
+            <div class="col-sm-6" style="margin-right:1%">
 
                 <!--Section heading-->
-                <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+                <h2 class="h1-responsive font-weight-bold text-justify my-4" style="font-size: 2em">Contact us</h2>
                 <!--Section description-->
-                <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to
-                    contact us directly. <br> Our team will come back to you within
-                    a matter of hours to help you.</p>
+
 
                 <div class="row">
 
@@ -55,11 +59,25 @@
                             <!--Grid row-->
                             <div class="row">
 
+                                <div class="row">
+
+                                    <!--Grid column-->
+                                    <div class="col-md-12">
+
+                                        <p class="text-justify w-responsive mx-auto mb-5" style="width: 95%">Do you have any
+                                            questions? Please do not hesitate to
+                                            contact us directly.Our team will come back to you within
+                                            a matter of hours to help you.</p>
+                                    </div>
+                                </div>
+
+
+
                                 <!--Grid column-->
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
+                                        <label for="name" class="text-muted">Your name</label>
                                         <input type="text" id="name" name="name" class="form-control">
-                                        <label for="name" class="">Your name</label>
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -67,8 +85,10 @@
                                 <!--Grid column-->
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
+                                        <label for="email" class="text-muted">Your email</label>
                                         <input type="text" id="email" name="email" class="form-control">
-                                        <label for="email" class="">Your email</label>
+
+                                        <br>
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -76,15 +96,6 @@
                             </div>
                             <!--Grid row-->
 
-                            <!--Grid row-->
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="md-form mb-0">
-                                        <input type="text" id="subject" name="subject" class="form-control">
-                                        <label for="subject" class="">Subject</label>
-                                    </div>
-                                </div>
-                            </div>
                             <!--Grid row-->
 
                             <!--Grid row-->
@@ -94,9 +105,10 @@
                                 <div class="col-md-12">
 
                                     <div class="md-form">
+                                        <label for="message" class="text-muted">Your message</label>
                                         <textarea type="text" id="message" name="message" rows="2"
                                             class="form-control md-textarea"></textarea>
-                                        <label for="message">Your message</label>
+                                        <br>
                                     </div>
 
                                 </div>
@@ -121,7 +133,7 @@
             </div>
             <div class="col-sm-5 text-light d-flex justify-content-center" style="background-color:#152238; ">
                 <div class="col-md-5 text-center" style="margin-top:70px ">
-                    <ul class="list-unstyled mb-0" >
+                    <ul class="list-unstyled mb-0">
                         <li><i class="fas fa-map-marker-alt fa-2x"></i>
                             <p>KN 8 Ave, Kigali</p>
                         </li>
@@ -138,5 +150,7 @@
             </div>
         </div>
     </div>
+
+
 
 @endsection
