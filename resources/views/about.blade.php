@@ -4,13 +4,14 @@
 
     <style>
         body {
-            background-color: azure;
+            background-color: #e1f1f5;
         }
 
     </style>
 
-    <div class="container" style="margin-top: 10%">
+    <div class="container" style="margin-top: 14%">
         <div style="background-color: white">
+            <br><br>
             <h2 class="text-center">~ Our Mission ~</h2>
             <h6 class="text-center">To connect investors to zeleous enterpreneurs</h6>
 
@@ -23,11 +24,14 @@
                 deeply their targets before matching them. Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Molestias rerum velit, aliquid tempore, accusamus
                 hic at fugiat voluptatibus nulla officia expedita qui! Error, libero voluptatum. Corrupti illo officia optio
-                repellat. <br><br>
+                repellat. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, quas culpa? Adipisci vel
+                voluptates doloremque dolorem recusandae ipsum exercitationem fugit doloribus expedita ab eligendi
+                voluptatem, at quas quos dolores deserunt!<br><br><br>
             </p>
 
 
         </div>
+        <br><br>
 
         <div style="background-color: white">
             <h2 class="text-center" style="padding-top:3%">~ Leadership ~</h2>
