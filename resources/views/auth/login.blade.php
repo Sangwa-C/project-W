@@ -62,6 +62,9 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+                                <a class="btn btn-success "  href="/register">
+                                    {{ __('Register') }}
+                                </a>
                             </div>
                         </div>
                     </form>

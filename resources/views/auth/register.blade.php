@@ -97,6 +97,9 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+                                <a class="btn btn-success "  href="/login">
+                                    {{ __('login') }}
+                                </a>
                             </div>
                         </div>
                     </form>
