@@ -96,7 +96,7 @@
                                 How It works
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Investor</a>
+                                <a class="dropdown-item" href="/investorSteps">Investor</a>
                                 <a class="dropdown-item" href="#">Entrepreneur</a>
                             </div>
                         </div>

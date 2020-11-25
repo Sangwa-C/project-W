@@ -32,6 +32,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    
     <script src="assets\js\script.js"></script>
 
     <link rel="stylesheet" href="assets\css\styles.css">
@@ -101,7 +102,7 @@
                                 How It works
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Investor</a>
+                                <a class="dropdown-item" href="/investorSteps">Investor</a>
                                 <a class="dropdown-item" href="#">Entrepreneur</a>
                             </div>
                         </div>

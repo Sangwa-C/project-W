@@ -17,4 +17,9 @@ class AppController extends Controller
     {
         return view('about');
     }
+
+    public function investorSteps()
+    {
+        return view('investorSteps');
+    }
 }
