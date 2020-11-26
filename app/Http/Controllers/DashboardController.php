@@ -86,8 +86,8 @@ class DashboardController extends Controller
     public function allUsers()
     {
         $allUsers = DB::table('users')->get();
-        dd($allUsers);
-        return view('allUsers',compact('allUsers',));
+
+        return view('allUsers',compact('allUsers'));
         $userinfo = DB::table('users')->get();
         $userproject = DB::table('register_businesses')->get();
         $userProfile = (object) array_merge((array) $userinfo, (array) $userproject);

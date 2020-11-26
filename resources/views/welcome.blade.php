@@ -1,5 +1,4 @@
 @extends('layouts.all')
-
 @section('content')
 
 
@@ -13,17 +12,11 @@
                     </h2>
                 </div>
                 <div class="col-sm-6  text-justify" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000">
-
                     <p>We are an intermediate company that helps entrepreneurs to connect with investors, either helping
                         with mentorship, trainings, and funding.
-
                         According to what an entrepreneur project needs or investor wants, we categorize them and analyze
                         deeply their targets before matching them.
-
                     </p>
-
-
-
                     <p> After that, we offer comments, feedback, and stars/ rating to the best entrepreneur of the period.
                     </p>
 
