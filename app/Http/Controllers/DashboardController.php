@@ -91,17 +91,17 @@ class DashboardController extends Controller
         $userinfo = DB::table('users')->get();
         $userproject = DB::table('register_businesses')->get();
         $userProfile = (object) array_merge((array) $userinfo, (array) $userproject);
-        return view('adminuser', compact('userinfo',));
+        return view('adminuser', compact('userinfo'));
     }
     public function Investors()
     {
         $userinfo = DB::table('users')->get()->toArray();
-        return view('home.Investors', compact('userinfo',));
+        return view('home.Investors', compact('userinfo'));
     }
     public function Enterprenuer()
     {
         $userinfo = DB::table('users')->get()->toArray();
-        return view('home.Enterprenuer', compact('userinfo',));
+        return view('home.Enterprenuer', compact('userinfo'));
     }
     public function InvestoresRequest()
     {
