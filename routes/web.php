@@ -47,13 +47,15 @@ Route::get('/EnterprenuerRequest', 'App\Http\Controllers\DashboardController@Ent
 //  $view->with(compact('ProvinceRegion'));});
 
 
-// app routes  InvestorSteps.blade
+// app routes  InvestorSteps.blade enterSteps
 
 Route::get('/contact', 'App\Http\Controllers\AppController@contact');
 
 Route::get('/about', 'App\Http\Controllers\AppController@about');
 
 Route::get('/investorSteps', 'App\Http\Controllers\AppController@investorSteps');
+
+Route::get('/enterSteps', 'App\Http\Controllers\AppController@enterSteps');
 
 
 Auth::routes();

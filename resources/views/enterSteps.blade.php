@@ -213,11 +213,12 @@
 
     <div class="container" style="margin-top: 14%">
 
-        <div>
-            
+        <div style="background-color: white">
+            <br><br>
+            <h2 class="text-center">~ enterpreneurs ~</h2>
         </div>
 
-        <div class="row">
+        <div class="row" style="margin-top: 4%">
             <div class="col-sm-7">
 
                 <div class="row mt-1">
@@ -374,7 +375,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4" style="margin-top: 8%">
                 {{-- <div class="row">
                     <div class="col-md-4 mx-auto p-0"> --}}
                         <div class="card">

@@ -97,7 +97,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="/investorSteps">Investor</a>
-                                <a class="dropdown-item" href="#">Entrepreneur</a>
+                                <a class="dropdown-item" href="/enterSteps">Entrepreneur</a>
                             </div>
                         </div>
                     </li>
