@@ -292,7 +292,7 @@
 
     {{-- contact form --}}
 
-    <section style="margin-top: 7%; background-color: #e1f1f5">
+    {{-- <section style="margin-top: 7%; background-color: #e1f1f5">
         <div style="padding-top:1%">
             <div class="container contact-form">
                 <div class="contact-image">
@@ -329,7 +329,7 @@
         </div>
 
         <br><br>
-    </section>
+    </section> --}}
 
     {{-- footer --}}
     <!-- Footer -->
