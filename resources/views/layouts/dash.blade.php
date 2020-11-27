@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="assets\css\bootstrap.css">
-    <link rel="stylesheet" href="assets\css\dash.css">
-    <script src="assets\js\dash.js"></script>
+    <link rel="stylesheet" href="{{ url('assets\css\bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url('assets\css\dash.css') }}">
+    <script src="{{ url('assets\js\dash.js') }}"></script>
 </head>
 <body>
     <div class="wrapper">

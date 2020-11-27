@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Decision;
 use App\Models\investors;
 use App\Models\registerBusiness;
 use App\Models\User;
@@ -12,11 +14,26 @@ use PhpParser\Node\Expr\BinaryOp\Concat as BinaryOpConcat;
 
 class DashboardController extends Controller
 {
+      /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function userinfo()
     {
         $userInfor = DB::table('users')->get();
         // dd($userinfo); allUsers
-        return view('profile',compact('userInfor'));
+        return view('profile', compact('userInfor'));
     }
     public function personCause()
     {
@@ -85,13 +102,8 @@ class DashboardController extends Controller
     }
     public function allUsers()
     {
-        $allUsers = DB::table('users')->get();
-
-        return view('allUsers',compact('allUsers'));
-        $userinfo = DB::table('users')->get();
-        $userproject = DB::table('register_businesses')->get();
-        $userProfile = (object) array_merge((array) $userinfo, (array) $userproject);
-        return view('adminuser', compact('userinfo'));
+        $userinfo = DB::table('users')->where('user_type', 'admin')->get();
+        return view('home.allUsers', compact('userinfo'));
     }
     public function Investors()
     {
@@ -105,27 +117,72 @@ class DashboardController extends Controller
     }
     public function InvestoresRequest()
     {
-         $userinfo = Investors::all();
-          foreach ($userinfo as $key => $value) {
-             $userid=$value->userId;
-             $sector=$value->sector;
-             $userinfo[$key]['users'] =DB::table('users')->where('id',$userid) ->get();
-             $userinfo[$key]['sectors'] =DB::table('sectors')->where('id', $sector) ->get();
-         }
+        $userinfo = Investors::all();
+        foreach ($userinfo as $key => $value) {
+            $userid = $value->userId;
+            $sector = $value->sector;
+            $userinfo[$key]['users'] = DB::table('users')->where('id', $userid)->get();
+            $userinfo[$key]['sectors'] = DB::table('sectors')->where('id', $sector)->get();
+        }
         return view('home.InvestoresRequest', compact('userinfo'));
     }
     public function EnterprenuerRequest()
     {
         $userinfo = registerBusiness::all();
         foreach ($userinfo as $key => $value) {
-           $userid=$value->userId;
-           $sector=$value->sector;
-           $userinfo[$key]['users'] =DB::table('users')->where('id',$userid) ->get();
-           $userinfo[$key]['sectors'] =DB::table('sectors')->where('id',$sector)->get();
-       }
-// dd( $userinfo);
-      return view('home.EnterprenuerRequest', compact('userinfo'));
-
+            $userid = $value->userId;
+            $sector = $value->sector;
+            $userinfo[$key]['users'] = DB::table('users')->where('id', $userid)->get();
+            $userinfo[$key]['sectors'] = DB::table('sectors')->where('id', $sector)->get();
+        }
+        return view('home.EnterprenuerRequest', compact('userinfo'));
     }
+    public function changingstutas($id)
+    {
+        $userinfo = DB::table('users')->select('name', 'email', 'Pnbr', 'user_type', 'id')->where('id', $id)->get();
+        return view('home.changingstutas', compact('userinfo'));
+    }
+    public function changingstatus(Request $request)
+    {
+        User::where('id', $request->id)
+            ->update(['user_type' => $request->user_type]);
+        return redirect()->back();
+    }
+    public function Enterprenuerconnect($id)
+    {
+        $selectusersector = DB::table('register_businesses')->where('userId', $id)->first();
+        $user = DB::table('users')->where('id', $id)->select('id', 'email', 'name', 'user_type', 'Pnbr')->get();
+        $investors = DB::table('investors')->where('sector', $selectusersector->sector)->get();
+        $connected =DB::table('decisions')->where('Enterpnuer_Id', $id)->get();
+        $conn=array();
+        foreach ($connected as $key => $value) {
 
+            $conn[] = DB::table('investors')->where('id', $value->Investors_id)->get()[0];
+
+
+        }
+
+        return view('home.Enterprenuerconnect', compact('user', 'investors','conn'));
+    }
+    public function connectnow(Request $request)
+    {
+        $user = Auth::user()->name;
+        $userid = Auth::user()->id;
+        if (!empty($request->my_checkbox)) {
+            $answers = [];
+            for ($i = 0; $i < count($request->my_checkbox); $i++) {
+                $answers[] = [
+                    'Investors_id' => $request->my_checkbox[$i],
+                    'Enterpnuer_Id' => $request->id,
+                    'sectors_Id' => $request->sector,
+                    'plane' =>' You have uploved by  ' . $user,
+                    'userId'=> $userid ,
+                    'created_at' => date("Y-m-d h:i"),
+                    'updated_at' => date("Y-m-d h:i"),
+                ];
+            }
+            Decision::insert($answers);
+            return redirect()->back();
+        }
+    }
 }

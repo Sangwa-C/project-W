@@ -21,7 +21,7 @@
                                     <th>Sector</th>
                                     <th>Support</th>
                                     <th>Discription</th>
-                                    <th>Action</th>
+                                   
                                 </tr>
                             </thead>
                             <tbody>
@@ -66,7 +66,7 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td> <a href="changingstutas/{{ $user->userId }}">{{ $user->userId }}</a> </td>
+
                                     </tr>
                                     @endforeach
 

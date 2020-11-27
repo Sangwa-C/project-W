@@ -7,7 +7,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-he  ader py-3">
-                <h6 class="m-0 font-weight-bold">Investors</h6>
+                <h6 class="m-0 font-weight-bold">Enterprenuer</h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -84,10 +84,9 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td> <a href="changingstutas/{{ $user->userId }}">
-                                    @foreach ($user['users'] as $usersKey=>$users)
-                                    {{$users->name}}
-                                    @endforeach
+
+                                <td> <a href="Enterprenuerconnect/{{ $user->userId }}" class="btn btn-success">
+                                  Connect
                                     </a>
                                 </td>
                             </tr>

@@ -21,6 +21,8 @@ class CreateDecisionsTable extends Migration
             $table->foreign('Enterpnuer_Id')->references('id')->on('users');
             $table->integer('Investors_id')->unsigned();
             $table->foreign('Investors_id')->references('id')->on('users');
+            $table->integer('userId')->unsigned();
+            $table->foreign('userId')->references('id')->on('users');
             $table->longText('plane');
             $table->timestamps();
         });

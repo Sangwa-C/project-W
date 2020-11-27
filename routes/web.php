@@ -40,6 +40,9 @@ Route::get('/Investors', 'App\Http\Controllers\DashboardController@Investors');
 Route::get('/Enterprenuer', 'App\Http\Controllers\DashboardController@Enterprenuer');
 Route::get('/InvestoresRequest', 'App\Http\Controllers\DashboardController@InvestoresRequest');
 Route::get('/EnterprenuerRequest', 'App\Http\Controllers\DashboardController@EnterprenuerRequest');
+Route::get('/changingstutas/{id}', 'App\Http\Controllers\DashboardController@changingstutas');
+Route::get('/Enterprenuerconnect/{id}', 'App\Http\Controllers\DashboardController@Enterprenuerconnect');
+Route::post('/connectnow','App\Http\Controllers\DashboardController@connectnow');
 
 // view()->composer(['*'], function($view) {
 
@@ -54,6 +57,7 @@ Route::get('/contact', 'App\Http\Controllers\AppController@contact');
 Route::get('/about', 'App\Http\Controllers\AppController@about');
 
 Route::get('/investorSteps', 'App\Http\Controllers\AppController@investorSteps');
+Route::post('/changingstatus', 'App\Http\Controllers\DashboardController@changingstatus');
 
 
 Auth::routes();

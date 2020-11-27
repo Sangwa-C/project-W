@@ -59,16 +59,7 @@
 
                                 </tr>
                             </thead>
-                            {{-- <tfoot>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Phone Number</th>
-                                    <th>Address</th>
-                                    <th>UserType</th>
-                                    <th>Person To Contach</th>
-                                </tr>
-                            </tfoot> --}}
+
                             <tbody>
 
 
