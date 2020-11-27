@@ -22,4 +22,9 @@ class AppController extends Controller
     {
         return view('investorSteps');
     }
+
+    public function enterSteps()
+    {
+        return view('enterSteps');
+    }
 }
