@@ -20,7 +20,7 @@ class AppController extends Controller
 
     public function investorSteps()
     {
-        return view('investorSteps');
+        return view('InvestorSteps');
     }
 
     public function enterSteps()
