@@ -82,7 +82,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="/about">About Us</a>
+                        <a class="nav-link text-light" href="/About">About Us</a>
                     </li>
 
                     <li class="nav-item">

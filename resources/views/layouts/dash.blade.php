@@ -79,7 +79,13 @@
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-
+                    @if (\Session::has('errormessage'))
+                    <div class="alert alert-danger">
+                        <ul>
+                            <li>{!! \Session::get('errormessage') !!}   &#128512;  &copy; Three time you will be blocked </li>
+                        </ul>
+                    </div>
+                @endif
                     <button type="button" id="sidebarCollapse" class="navbar-btn">
                         <span></span>
                         <span></span>

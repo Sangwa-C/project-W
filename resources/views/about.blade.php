@@ -58,6 +58,9 @@
                 <div class="col-md-4 justfiy-content-center">
                     <div class="text-center">
                         <img src="{{ url('assets/img/connecting.png') }}" class="rounded" alt="..."  style="width:200px; border-radius:50%">
+                      </div> <br>
+                      <div class="text-center">
+                       <p>Woodbary</p>
                       </div>
 
                 </div>

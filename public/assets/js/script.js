@@ -21,4 +21,10 @@ $(document).ready(function(){
     });
 });
 
-
+function chkInternetStatus() {
+    if(navigator.onLine) {
+        alert("Hurray! You're online!!!");
+    } else {
+        alert("Oops! You're offline. Please check your network connection...");
+    }
+}

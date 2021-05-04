@@ -151,6 +151,8 @@ class DashboardController extends Controller
     public function Enterprenuerconnect($id)
     {
         $selectusersector = DB::table('register_businesses')->where('userId', $id)->first();
+
+        if ($selectusersector != null) {
         $user = DB::table('users')->where('id', $id)->select('id', 'email', 'name', 'user_type', 'Pnbr')->get();
         $investors = DB::table('investors')->where('sector', $selectusersector->sector)->get();
         $connected =DB::table('decisions')->where('Enterpnuer_Id', $id)->get();
@@ -161,8 +163,14 @@ class DashboardController extends Controller
 
 
         }
-
         return view('home.Enterprenuerconnect', compact('user', 'investors','conn'));
+        }else{
+            return redirect('home')->with('errormessage', 'User is not existing thank you ');
+
+        }
+
+
+
     }
     public function connectnow(Request $request)
     {

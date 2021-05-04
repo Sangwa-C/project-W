@@ -21,6 +21,7 @@ function team() {
         document.getElementById("uploadTeamMembers").style.display = "none";
     }
 }
+
 // $(document).ready(function ($) {
 //     $("#yes").click(function() {
 //         $("#question1").hide();

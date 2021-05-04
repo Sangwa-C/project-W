@@ -54,7 +54,7 @@ Route::post('/connectnow','App\Http\Controllers\DashboardController@connectnow')
 
 Route::get('/contact', 'App\Http\Controllers\AppController@contact');
 
-Route::get('/about', 'App\Http\Controllers\AppController@about');
+Route::get('/About', 'App\Http\Controllers\AppController@about');
 
 Route::get('/investorSteps', 'App\Http\Controllers\AppController@investorSteps');
 Route::post('/changingstatus', 'App\Http\Controllers\DashboardController@changingstatus');
